@@ -3,7 +3,7 @@ import User from "./user"
 import React from "react"
 
 const mSTP = ({ session }) => {
-    debugger
+  
    const { currentUser } = session
     return {
         user: currentUser

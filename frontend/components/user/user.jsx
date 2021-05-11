@@ -2,7 +2,7 @@ import React from "react"
 
 
 const User = (props) => {
-    debugger
+
     if (!props.user) { 
         props.history.push("/signup")
         return null

@@ -19,7 +19,7 @@ class Login extends React.Component {
     }
 
     handleSubmit(e) {
-        debugger
+        
         e.preventDefault()
         this.props.loginUser(this.state)
             .then(() => this.props.history.push("/user"))
@@ -34,6 +34,7 @@ class Login extends React.Component {
         return (
             <div>
                 <h1>Log In</h1>
+                { this.props.otherForm}
                 <form  >
                     <label htmlFor="username">Username:
                         <input onChange={this.handleInput("username")} type="text" value={this.state.username} />

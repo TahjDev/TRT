@@ -20,7 +20,7 @@ class Signup extends React.Component {
     }
 
     handleSubmit(e){
-        debugger
+       
         e.preventDefault()
         this.props.createNewUser(this.state)
         .then(() => this.props.history.push("/user"))
@@ -35,7 +35,8 @@ class Signup extends React.Component {
     render() {
         return (
             <div>
-                <h1>Sign In</h1>
+                <h1>Sign Up</h1>
+                {this.props.otherForm}
                 <form  >
                     <label htmlFor="username">Username:
                         <input onChange={this.handleInput("username")} type="text" value={this.state.username}/>
