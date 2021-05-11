@@ -6,7 +6,6 @@ class NavBar extends React.Component {
     constructor(props) {
         super(props)
         
-       
     }
 
     display() {
@@ -30,14 +29,29 @@ class NavBar extends React.Component {
         
     }
 
+    errors() {
+     return  this.props.errors.map( (error, idx) => {
+            return ( 
+                 <li key={idx}>{error}</li> 
+                )
+        })
+        
+    }
+
 
     
     render()  {
 
-        this.props.error ? this.clearError() : null
+        this.props.errors ? this.clearError() : null
        return (
        <div>
-            <div>{ this.props.error ? this.props.error : null }</div>
+            <div>{ this.props.errors ?
+                     <ul>
+                    {this.errors()}
+                    </ul>
+                         : null 
+                }
+            </div>
             {this.display()}
         </div>
 

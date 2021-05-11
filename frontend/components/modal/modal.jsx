@@ -5,9 +5,9 @@ import LoginContainer from "../session/login_container"
 import SignupContainer from "../session/signup_container"
 
 const Modal = ({ modal, closeModal }) => {
-    debugger
+    
     if (!modal) return null;
-    debugger
+    
     let component;
     switch(modal) {
         case "login":

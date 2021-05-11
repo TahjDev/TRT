@@ -7,12 +7,10 @@ import { removeError } from "../../actions/session_actions"
 const mSTP = ({ session }) => {
     const { currentUser } = session
     let { error } = session
-
-    if ( error instanceof Array ) { error = error.join(" ") }
     
     return {
         currentUser,
-        error
+        errors : error
     }
 }
 

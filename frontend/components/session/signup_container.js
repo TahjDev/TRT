@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import {openModal } from "../../actions/modal_actions"
+import { createNewUser } from "../../actions/session_actions"
 import Signup from "./signup"
 import React from "react"
 
