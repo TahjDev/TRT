@@ -36,5 +36,9 @@
   "bugs": {
     "url": "https://github.com/TahjDev/TRT/issues"
   },
+  "engines": {
+    "node": "10.13.0",
+    "npm": "6.4.1"
+  },
   "homepage": "https://github.com/TahjDev/TRT#readme"
 }
