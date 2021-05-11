@@ -27,5 +27,7 @@
 /config/master.key
 
 node_modules.js/
-
+tmp/
+bundle.js.map
 bundle.js
+.DS_Store
