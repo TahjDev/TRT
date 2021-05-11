@@ -24,21 +24,20 @@ class NavBar extends React.Component {
       )
     }
 
-    // removeError() {
+    clearError() {
 
-    //         setTimeout(this.props.removeError(), 5000)
+            setTimeout(this.props.removeError, 5000)
         
-    // }
+    }
 
 
     
     render()  {
 
-     
+        this.props.error ? this.clearError() : null
        return (
        <div>
             <div>{ this.props.error ? this.props.error : null }</div>
-            {/* {this.removeError()} */}
             {this.display()}
         </div>
 
