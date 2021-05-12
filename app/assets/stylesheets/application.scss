@@ -14,11 +14,8 @@
  *= require_self
  */
 
-    @import "base/reset.scss";
-    @import "components/*";
 
-
- .modal-background {
+  .modal-background {
      position: fixed;
      top: 0;
      bottom: 0;
@@ -31,6 +28,12 @@
  .modal-child {
      position: absolute;
      top: 50%;
-     left: 50%;
+     left: 40%;
      transform: translate(-50%, -50%);
+     width: 500
  }
+
+    @import "base/reset.scss";
+    @import "components/*";
+
+

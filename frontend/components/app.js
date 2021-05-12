@@ -13,7 +13,6 @@ const App = () => {
             <Route exact path="/" component={SignupContainer} />
             <Route path="/user" component={UserContainer} />
             
-                {/* <Route path="/login" component={LoginContainer}></Route> */}
          </div>
    )
 

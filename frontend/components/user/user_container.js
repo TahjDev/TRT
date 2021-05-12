@@ -1,8 +1,9 @@
 import { connect } from "react-redux"
 import User from "./user"
 import React from "react"
+import { withRouter } from "react-router-dom"
 
-const mSTP = ({ session }) => {
+const mSTP = ({ session }, ownprops) => {
   
    const { currentUser } = session
     return {
@@ -11,4 +12,4 @@ const mSTP = ({ session }) => {
 }
 
 
-export default connect(mSTP, null)(User)
+export default withRouter(connect(mSTP, null)(User))

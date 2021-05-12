@@ -2,7 +2,7 @@ import { connect } from "react-redux"
 import React from "react"
 import { closeModal } from "../../actions/modal_actions"
 import LoginContainer from "../session/login_container"
-import SignupContainer from "../session/signup_container"
+import SignupModalContainer from "../session/signup_modal_container"
 
 const Modal = ({ modal, closeModal }) => {
     
@@ -14,16 +14,17 @@ const Modal = ({ modal, closeModal }) => {
             component = <LoginContainer/>
             break;
         case "signup":
-            component = <SignupContainer/>
+            component = <SignupModalContainer/>
             break;
         default:
         return null;
     }
     return (
         <div className="modal-background" onClick={closeModal}> 
-        <div className="modal-child" onClick={e => e.stopPropagation()}>
-            { component }
-        </div>
+            <div className="modal-child" onClick={e => e.stopPropagation()}>
+                { component }
+            </div>
+           ==
         </div>
     )
 

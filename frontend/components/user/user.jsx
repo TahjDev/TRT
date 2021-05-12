@@ -4,7 +4,7 @@ import React from "react"
 const User = (props) => {
 
     if (!props.user) { 
-        props.history.push("/signup")
+        props.history.push("/")
         return null
     }
     return (

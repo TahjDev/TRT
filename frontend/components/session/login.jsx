@@ -37,9 +37,9 @@ class Login extends React.Component {
     handleDemoUser(e){
         e.preventDefault()
      const object = {
-            email: "water",
-            username: "water",
-            password: "password"
+            email: "coolperson@you.com",
+            username: "CoolPerson",
+            password: "coolguy12"
                  }
         this.props.loginUser(object)
                  .then(() => { this.props.history.push("/user")})
