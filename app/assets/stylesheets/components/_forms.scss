@@ -1,0 +1,31 @@
+.signup-form-box{
+    background-color:#3c3b4b;
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px
+    
+}
+.signup-form-box p {
+    display: block;
+    font-size: 20px;
+}
+
+.signup-form-box label, .signup-form-box input {
+     color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+input {
+    border-bottom: 2px solid white;
+    display: block;
+}
+
+body {
+    background-color: #2c2c44;
+}

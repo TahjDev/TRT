@@ -9,6 +9,7 @@ class Login extends React.Component {
             password: ""
         };
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.handleDemoUser = this.handleDemoUser.bind(this)
 
     }
 
@@ -22,7 +23,10 @@ class Login extends React.Component {
         
         e.preventDefault()
         this.props.loginUser(this.state)
-            .then(() => this.props.history.push("/user"))
+            .then(() => {
+                this.props.history.push("/user")
+                this.props.closeModal()
+            })
         this.setState({ 
             username: "",
             email: "",
@@ -30,9 +34,23 @@ class Login extends React.Component {
 
     }
 
+    handleDemoUser(e){
+        e.preventDefault()
+     const object = {
+            email: "water",
+            username: "water",
+            password: "password"
+                 }
+        this.props.loginUser(object)
+                 .then(() => { this.props.history.push("/user")})
+        this.props.closeModal()
+    }
+
+    handleErrors
+
     render() {
         return (
-            <div>
+            <div className="signup-form-box">
                 <h1>Log In</h1>
                 { this.props.otherForm}
                 <form  >
@@ -46,6 +64,7 @@ class Login extends React.Component {
                         <input onChange={this.handleInput("password")} type="password" value={this.state.password} />
                     </label>
                     <button onClick={this.handleSubmit}>Log In</button>
+                    <button onClick={this.handleDemoUser}>Demo User</button>
                 </form>
             </div>
         )

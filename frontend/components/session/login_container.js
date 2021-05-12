@@ -1,6 +1,8 @@
 import { connect } from "react-redux"
 import {loginUser } from "../../actions/session_actions"
 import { openModal } from "../../actions/modal_actions"
+import { closeModal } from "../../actions/modal_actions"
+import { withRouter } from 'react-router-dom';
 import Login from "./login"
 import React from "react"
 
@@ -17,4 +19,4 @@ const mDTP = dispatch => {
    } 
 }
 
-export default connect(null, mDTP)(Login)
+export default withRouter(connect(null, mDTP)(Login))

@@ -34,21 +34,24 @@ class Signup extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Sign Up</h1>
-                {this.props.otherForm}
-                <form  >
-                    <label htmlFor="username">Username:
-                        <input onChange={this.handleInput("username")} type="text" value={this.state.username}/>
-                    </label>
-                    <label htmlFor="email">Email:
-                        <input onChange={this.handleInput("email")} type="text" value={this.state.email}/>
-                    </label>
-                    <label htmlFor="">Password:
-                        <input onChange={this.handleInput("password")} type="password" value={this.state.password}/>
-                    </label>
-                    <button onClick={this.handleSubmit}>Sign Up</button>
-                </form>
+            <div className="signup-container">
+                <p>CREATE MY FREE ACCOUNT</p>
+                <div className="signup-form-box">
+                    
+                    {this.props.otherForm}
+                    <form >
+                        <label htmlFor="username">Username:
+                            <input onChange={this.handleInput("username")} type="text" value={this.state.username}/>
+                        </label>
+                        <label htmlFor="email">Email:
+                            <input onChange={this.handleInput("email")} type="text" value={this.state.email}/>
+                        </label>
+                        <label htmlFor="">Password:
+                            <input onChange={this.handleInput("password")} type="password" value={this.state.password}/>
+                        </label>
+                        <button onClick={this.handleSubmit}>CREATE ACCOUNT</button>
+                    </form>
+                </div>
             </div>
         )
     }
