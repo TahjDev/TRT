@@ -11,7 +11,7 @@ class Anime < ApplicationRecord
 
     has_many :episodes,
     primary_key: :id,
-    foreign_key: :movie_id,
+    foreign_key: :anime_id,
     class_name: :Episode
     
     has_many :filters, 

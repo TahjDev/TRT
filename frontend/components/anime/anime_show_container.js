@@ -1,5 +1,6 @@
 import { connect } from "react-redux"
 import AnimeShow from "./anime_show"
+import { fetchAnime } from "../../utils/anime_utils"
 
 const mSTP = ( {entities}, ownprops ) => {
     debugger
@@ -10,5 +11,10 @@ const mSTP = ( {entities}, ownprops ) => {
     }
 }
 
+const mDTP = dispatch => {
+    return {
+        fetchAnime: (id) => dispatch(fetchAnime(id))
+    }
+}
 
-export default connect(mSTP, null)(AnimeShow)
+export default connect(mSTP, mDTP)(AnimeShow)
