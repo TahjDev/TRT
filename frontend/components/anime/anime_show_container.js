@@ -1,7 +1,9 @@
 import { connect } from "react-redux"
+import AnimeShow from "./anime_show"
 
 const mSTP = ( {entities}, ownprops ) => {
-    let { animes } = entities
+    debugger
+    const { animes } = entities;
     const newId = ownprops.match.params.id
     return {
         anime: animes[newId]

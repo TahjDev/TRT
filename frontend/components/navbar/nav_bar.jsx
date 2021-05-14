@@ -11,11 +11,11 @@ class NavBar extends React.Component {
     display() {
       return (  this.props.currentUser ? (
             <div>
-                <button onClick={this.props.logout}>Log Out</button>
+              <Link to="/splash"> <button onClick={this.props.logout}>Log Out</button></Link> 
             </div>
         ) : (
                 <div>
-                    <Link to="/" >Sign Up</Link>
+                    <Link to="/splash" >Sign Up</Link>
                 </div>
 
             )

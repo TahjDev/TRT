@@ -41,15 +41,19 @@ class EditUser extends React.Component  {
         this.props.updateUser(newUser)
     }
 
+    displayAvatar(){
+      return this.props.user.photoUrl ? this.props.user.photoUrl : window.avatar 
+    }
+
 
     render() {
             
        return ( 
             <div>
-               <img src={this.props.user.photoUrl} alt="" />
+               <img src={this.displayAvatar()} alt="" />
                  <form >
                     <input onChange={this.handleInput} type="text" value={this.state.username}/>
-                    <input type="file" onChange={this.handleFile } value=""/>
+                    <input type="file" onChange={this.handleFile } />
                     <button onClick={this.handleSubmit}>Update Info</button>
                 </form>
             </div>

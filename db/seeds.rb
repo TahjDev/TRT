@@ -8,10 +8,17 @@
 
 User.destroy_all
 Anime.destroy_all
+Episode.destroy_all
+Service.destroy_all
 
 require 'open-uri'
 
-User.create(username: "CoolPerson", email:"coolperson@you.com", password: "coolguy12")
+demo = User.create(username: "CoolPerson", email:"coolperson@you.com", password: "coolguy12")
+
+# tanj_prof_pic = open("https://trt-seeds.s3.amazonaws.com/tanjiro.jpeg")
+# demo.photo.attach(io: tanj_prof_pic, filename: 'tanjiro.jpeg')
+
+
 
 # Filter.create(filter_id: 1, filtered_id: 1)
 # Genre.create(name: "Shonen")
@@ -34,7 +41,6 @@ aotEp.video.attach(io: aot_vid_file, filename: "Patrick joins the Survey Corps.m
 
 
 Service.create(name: "HIDIVE")
-
 
 
 Service.create(name: "CARTOON HANGOVER")

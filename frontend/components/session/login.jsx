@@ -24,7 +24,7 @@ class Login extends React.Component {
         e.preventDefault()
         this.props.loginUser(this.state)
             .then(() => {
-                this.props.history.push("/user")
+                this.props.history.push("/view")
                 this.props.closeModal()
             })
         this.setState({ 
@@ -42,11 +42,11 @@ class Login extends React.Component {
             password: "coolguy12"
                  }
         this.props.loginUser(object)
-                 .then(() => { this.props.history.push("/user")})
+                 .then(() => { this.props.history.push("/view")})
         this.props.closeModal()
     }
 
-    handleErrors
+  
 
     render() {
         return (
