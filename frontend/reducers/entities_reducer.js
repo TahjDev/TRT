@@ -1,7 +1,9 @@
+import { combineReducers } from "redux";
+import animesReducer from "./animes_reducer"
 
 
-const EntitiesReducer = (state = {}, action) => {
-    return state
-}
+const EntitiesReducer = combineReducers( {
+    animes: animesReducer
+})
 
 export default EntitiesReducer;

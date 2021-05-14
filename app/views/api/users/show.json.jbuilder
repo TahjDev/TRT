@@ -1,1 +1,2 @@
-json.extract! @user, :email, :username, :password
+json.extract! @user, :id, :email, :username, :password
+json.photoUrl url_for(@user.photo)

@@ -1,9 +1,9 @@
 import React from "react"
 import { Route } from 'react-router-dom'
-import UserContainer from "./user/user_container"
+import EditUserContainer from "./user/edit_user_container"
 import SignupContainer from "./session/signup_container"
 import NavBarContainer from "./navbar/nav_bar_container"
-import LoginContainer from "./session/login_container"
+import AnimeIndexContainer from "./anime/animes_index_container"
 import Modal from "./modal/modal"
 const App = () => {
    return ( 
@@ -11,8 +11,10 @@ const App = () => {
             <Modal />
             <Route path="/" component={NavBarContainer}/>
             <Route exact path="/" component={SignupContainer} />
-            <Route path="/user" component={UserContainer} />
-            
+            <Route path="/view" component={AnimeIndexContainer}/>
+            <Route path="/editprofile" component={EditUserContainer}/>
+            <Route path={`/animes/:id`}/>
+
          </div>
    )
 

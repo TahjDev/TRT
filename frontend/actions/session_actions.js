@@ -34,6 +34,10 @@ export const removeError = () => {
 export const createNewUser = formUser => dispatch => {
     return SessionAPIUtil.postUser(formUser).then(user => dispatch(receiveCurrentUser(user)), err => dispatch(receiveError(err.responseJSON)))
 }
+export const updateUser = (data) => dispatch => {
+    
+    return SessionAPIUtil.updateUser(data).then(user => dispatch(receiveCurrentUser(user)), err => dispatch(receiveError(err.responseJSON)))
+}
 export const loginUser = formUser => dispatch => {
    return SessionAPIUtil.postSession(formUser).then(user => dispatch(receiveCurrentUser(user)), err => dispatch(receiveError(err.responseJSON)))
 }
@@ -43,5 +47,9 @@ export const logutUser = formUser => dispatch => {
 
 export const logout = () => dispatch => {
  return SessionAPIUtil.deleteSession().then( () => dispatch(logoutCurrentUser()))
+}
+
+export const fetchUser = (id) => dispatch => {
+    return SessionAPIUtil.fetchUser(id).then( user => dispatch(receiveCurrentUser(user)) )
 }
 
