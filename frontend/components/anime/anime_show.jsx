@@ -6,7 +6,7 @@ class AnimeShow extends React.Component {
         }
 
     componentDidMount(){
-        
+        this.props.fetchAnime(props.anime.id)
     }
 
 
@@ -16,6 +16,7 @@ class AnimeShow extends React.Component {
             <img src={anime.photoUrl} />
             <h1>{anime.name}</h1>
             <p>{anime.description}</p>
+            
         </div>
         )
     }

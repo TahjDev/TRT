@@ -5,7 +5,7 @@ class Api::AnimesController < ApplicationController
     end
 
     def show 
-        @anime = Anime.find(params[:id])
+        @anime = Anime.includes(:episodes).find(params[:id])
         render :show
     end
 
