@@ -1,10 +1,13 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
-const EpisodeItem = (props) => {
+const EpisodeItem = ({ episode }) => {
+    debugger
+    // turn this entire div into a link
     return (
         <div>
-            <img src={props.episode.photoUrl} alt="episode_img"/>
-            <p>{props.episode.name}</p>
+            <Link params={{animeId: episode.anmeId}}to={`/episode/${episode.id}`}> <img src={episode.photoUrl} alt="episode_img" /></Link> 
+            <p>{episode.name}</p>
         </div>
     )
 }

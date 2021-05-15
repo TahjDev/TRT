@@ -11,8 +11,9 @@ const receiveAnimes = (animes) => {
     }
 }
 const receiveAnime = (anime) => {
+
     return {
-        type: RECEIVE_ANIMES,
+        type: RECEIVE_ANIME,
         anime
     }
 }
