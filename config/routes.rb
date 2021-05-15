@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :watchlists, only: [:create, :destroy]
       resource :session, only: [:create, :destroy] 
       resources :animes, only: [:show, :index]
+      resources :episodes, only: [:show]
     end
     root to: 'static_pages#root'
 end

@@ -9,7 +9,6 @@ class AnimeShow extends React.Component {
         }
 
     componentDidMount(){
-    
         this.props.fetchAnime(this.props.match.params.id)
     }
 
@@ -25,6 +24,10 @@ class AnimeShow extends React.Component {
                 />
             )
              })
+    }
+
+    addToWatchList(){
+        postWatchList
     }
 
 

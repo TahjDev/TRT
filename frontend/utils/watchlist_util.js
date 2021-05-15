@@ -1,4 +1,4 @@
-export const postWatchlist = (watcher_id, watchlist_id) => {
+export const postWatchlist = (watcherId, watchedId) => {
     return $.ajax({
         url: "/api/watchlists",
         method: "POST"

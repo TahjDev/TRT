@@ -1,0 +1,1 @@
+json.extract! @episode, :anime_id

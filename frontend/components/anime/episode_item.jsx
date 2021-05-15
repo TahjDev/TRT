@@ -6,7 +6,12 @@ const EpisodeItem = ({ episode }) => {
     // turn this entire div into a link
     return (
         <div>
-            <Link params={{animeId: episode.anmeId}}to={`/episode/${episode.id}`}> <img src={episode.photoUrl} alt="episode_img" /></Link> 
+            <Link to={{
+                pathname: `/episode/${episode.id}`,
+                state: {
+                    animeId: episode.id
+                }
+            }}> <img src={episode.photoUrl} alt="episode_img" /></Link> 
             <p>{episode.name}</p>
         </div>
     )
