@@ -7,6 +7,7 @@ json.episodes do
         json.set! episode.id do 
             json.extract! episode, :id, :name, :anime_id
             json.videoUrl url_for(episode.video)
+            json.photoUrl url_for(episode.photo)
         end
     end
 end

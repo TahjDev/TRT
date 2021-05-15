@@ -2,6 +2,7 @@ class Episode < ApplicationRecord
 
 
     has_one_attached :video
+    has_one_attached :photo
 
     belongs_to :anime,
     primary_key: :id,
@@ -16,6 +17,11 @@ class Episode < ApplicationRecord
     has_many :watchers, 
     through: :watch_lists,
     source: :watcher
+
+    has_many :comments,
+    primary_key: :id,
+    foreign_key: :episode_id,
+    class_name: :Comment
 
 
 end

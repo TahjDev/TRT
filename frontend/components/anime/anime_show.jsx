@@ -1,4 +1,5 @@
 import React from "react"
+import EpisodeItem from "./episode_item"
 
 class AnimeShow extends React.Component {
     constructor(props) {
@@ -10,9 +11,13 @@ class AnimeShow extends React.Component {
     }
 
     mappedEpisodes(){
-        this.props.anime.episodes.map(ep => {
-            
-        })
+    return  this.props.anime.episodes.map(ep => {
+            return (
+                <EpisodeItem
+                episode={ep}
+                />
+            )
+             })
     }
 
 
@@ -20,12 +25,13 @@ class AnimeShow extends React.Component {
         return (
             <>
             <div className="anime">
-                <img src={anime.photoUrl} />
-                <h1>{anime.name}</h1>
-                <p>{anime.description}</p>
+                <img src={this.props.anime.photoUrl} />
+                <h1>{this.props.anime.name}</h1>
+                <p>{this.props.anime.description}</p>
+                <button></button>
             </div>
             <div>
-
+                {this.mappedEpisodes()}
             </div>
             </>
         )

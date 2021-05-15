@@ -15,7 +15,7 @@ class User < ApplicationRecord
 
     has_many :episodes,
     through: :watched_lists,
-    source: :watched
+    source: :episode
 
     has_many :comments,
     foreign_key: :user_id,
