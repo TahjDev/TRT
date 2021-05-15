@@ -45,7 +45,8 @@ class EpisodeShow extends React.Component {
         const currentEp = this.currentEpisode()
         return (
             <>
-            <video width="320" height="240" controls src={currentEp.videoUrl}></video>
+            <video id="vid"width="320" height="240" controls src={currentEp.videoUrl}></video>
+             
                 <div className="anime">
                     <img src={this.props.anime.photoUrl} />
                     <h1>{this.props.anime.name}</h1>

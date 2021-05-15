@@ -1,6 +1,6 @@
 class Watchlist < ApplicationRecord
 
-    validates: watcher_id: uniqueness: { scope: :episode }
+    validates :watcher_id, uniqueness: { scope: :episode }
 
     belongs_to :watcher,
     primary_key: :id,
