@@ -47,17 +47,19 @@ class Signup extends React.Component {
                     <div className="signup-form-box">
                         <form >
                         <h2>CREATE MY FREE ACCOUNT</h2>
-                            <label htmlFor="username">Username:
-                                <input onChange={this.handleInput("username")} type="text" value={this.state.username}/>
+                            <label className="label" htmlFor="username">Username
+                                <input placeholder="" onChange={this.handleInput("username")} type="text" value={this.state.username}/>
                             </label>
-                            <label htmlFor="email">Email:
-                                <input onChange={this.handleInput("email")} type="text" value={this.state.email}/>
+                            <label htmlFor="email">Email
+                                <input placeholder="" onChange={this.handleInput("email")} type="text" value={this.state.email}/>
                             </label>
-                            <label htmlFor="">Password:
-                                <input onChange={this.handleInput("password")} type="password" value={this.state.password}/>
+                            <label htmlFor="">Password
+                                <input placeholder="" onChange={this.handleInput("password")} type="password" value={this.state.password}/>
                             </label>
                             <button className="yellow-button" onClick={this.handleSubmit}>CREATE ACCOUNT</button>
-                            <p>Existing user? {this.props.otherForm}</p>
+                            <div>
+                            <p>Existing user? <button>{this.props.otherForm}</button></p>
+                            </div>
                         </form>
 
                     </div>

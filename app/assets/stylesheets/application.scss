@@ -30,12 +30,16 @@
      top: 50%;
      left: 50%;
      transform: translate(-50%, -50%);
-     width: 500
+     width: 600;
  }
+    // Base
+    @import "base/_reset.scss";
+    @import "base/_variables.scss";
 
-    @import "base/reset.scss";
 
     @import "components/*";
+    @import "base/mixins.scss"
+    
 
 
 

@@ -10,5 +10,5 @@ class Watchlist < ApplicationRecord
     belongs_to :episode,
     primary_key: :id,
     foreign_key: :watched_id,
-    class_name: :Anime
+    class_name: :Episode
 end

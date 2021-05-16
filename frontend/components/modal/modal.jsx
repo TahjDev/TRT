@@ -24,7 +24,6 @@ const Modal = ({ modal, closeModal }) => {
             <div className="modal-child" onClick={e => e.stopPropagation()}>
                 { component }
             </div>
-           ==
         </div>
     )
 

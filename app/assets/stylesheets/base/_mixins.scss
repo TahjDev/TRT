@@ -1,0 +1,7 @@
+@mixin button {
+    color: rgb(44, 113, 240);
+     &:hover{
+        filter: brightness(120%);
+    }
+}
+

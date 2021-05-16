@@ -3,6 +3,7 @@ import React from "react"
 import NavBar from "./nav_bar"
 import { logout } from "../../actions/session_actions"
 import { removeError } from "../../actions/session_actions"
+import { openModal } from "../../actions/modal_actions"
 
 const mSTP = ({ session }) => {
     const { currentUser } = session
@@ -18,7 +19,12 @@ const mDTP = dispatch => {
     
    return {
        logout: () => dispatch(logout()),
-       removeError: () => dispatch(removeError())
+       removeError: () => dispatch(removeError()),
+       otherForm: (
+        <button onClick={() => dispatch(openModal())}> 
+        
+        </button> 
+       )
    } 
    
 }

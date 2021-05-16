@@ -1,4 +1,6 @@
 import React from "react"
+import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Login extends React.Component {
     constructor(props) {
@@ -50,22 +52,27 @@ class Login extends React.Component {
 
     render() {
         return (
-            <div className="signup-form-box">
-                <h1>Log In</h1>
-                { this.props.otherForm}
-                <form  >
-                    <label htmlFor="username">Username:
-                        <input onChange={this.handleInput("username")} type="text" value={this.state.username} />
-                    </label>
+            <div className="signup-form-box-modal-left">
+                
+                <form>
+                    <h1>Sign In</h1>
                     <label htmlFor="email">Email:
                         <input onChange={this.handleInput("email")} type="text" value={this.state.email} />
                     </label>
                     <label htmlFor="">Password:
                         <input onChange={this.handleInput("password")} type="password" value={this.state.password} />
                     </label>
-                    <button onClick={this.handleSubmit}>Log In</button>
-                    <button onClick={this.handleDemoUser}>Demo User</button>
+                    <div>
+                        <button className="yellow-button" onClick={this.handleSubmit}>Lets Go</button>
+                        <button className="yellow-button" onClick={this.handleDemoUser}>Demo User</button>
+                    </div>
                 </form>
+                <div>
+                    <p>
+                        Create an account to customize your VRV experience.
+                        </p>
+                    <button>{this.props.otherForm} <FontAwesomeIcon icon={faChevronRight} /> <i className="fas fa-chevron-right"></i></button>
+                </div>
             </div>
         )
     }

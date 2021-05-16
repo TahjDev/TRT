@@ -10,7 +10,7 @@ class User < ApplicationRecord
 
     has_many :watched_lists,
     primary_key: :id,
-    foreign_key: :foreign_keys,
+    foreign_key: :watcher_id,
     class_name: :Watchlist
 
     has_many :episodes,
