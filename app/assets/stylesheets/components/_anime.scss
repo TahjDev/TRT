@@ -119,3 +119,18 @@
     grid-area: body2;
 
 }
+
+.display-episode {
+    display: flex;
+    justify-content: center;
+    margin-top: 300px;
+   
+    img {
+        width: 400px;
+  
+    }
+    div {
+        width: 400px;
+        background-color:#211d35 ;
+    }
+}

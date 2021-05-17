@@ -5,7 +5,7 @@ const EpisodeItem = ({ episode }) => {
     debugger
     // turn this entire div into a link
     return (
-        <div className="display-episode">
+        <>
             <Link to={{
                 pathname: `/episode/${episode.id}`,
                 state: {
@@ -14,8 +14,10 @@ const EpisodeItem = ({ episode }) => {
             }}>
                  <img src={episode.photoUrl} alt="episode_img" />
             </Link> 
-            <p>{episode.name}</p>
-        </div>
+            <div>
+                 <p>{episode.name}</p>
+            </div>
+        </>
     )
 }
 

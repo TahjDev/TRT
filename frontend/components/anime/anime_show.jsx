@@ -65,15 +65,12 @@ class AnimeShow extends React.Component {
                             {button}
                             </div>
                         </div>
-                       
                     </div>
-            <div>
-                        {
-                            <EpisodeItem
-                                key={id}
-                                episode={this.props.anime.episodes[0]}
-                            />
-                        }
+                    
+                <div className="display-episode">
+                 {
+                        <EpisodeItem episode={this.props.anime.episodes[0][1]}/>
+                }
                     
                 {this.mappedEpisodes()}
             </div>
