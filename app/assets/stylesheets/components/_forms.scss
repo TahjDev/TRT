@@ -32,6 +32,7 @@
     padding-left: 50px;
     padding-right: 50px;
     margin-left: 50px;
+    width: 500px;
 }
 
 .home-details p {
@@ -90,13 +91,13 @@ input {
 }
 
 body {
-    background-color: rgb(35, 25, 68);
+    background-color: rgb(28,26,38);
     color: white;
 }
 
-button:hover {
-    filter: brightness(140%);
-}
+// button:hover {
+//     filter: brightness(140%);
+// }
 
 .signup-form-box > form > p > button{
     @include button;

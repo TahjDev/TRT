@@ -1,5 +1,5 @@
 import React from "react"
-
+import AnimeIndexContainer from "../anime/animes_index_container"
 
 class Signup extends React.Component {
     constructor(props) {
@@ -36,7 +36,7 @@ class Signup extends React.Component {
 
     render() {
         return (
-  
+            <div className="splash-page">
                 <div className="home-container">
                     <div className="home-details">
                     <h2>WATCH <b>THE BEST</b> STUFF EVER</h2>
@@ -67,7 +67,13 @@ class Signup extends React.Component {
                         and you confirm that you are at least 16 years of age.
                     </p>
                 </div>
-       
+                <div>
+                    <div >
+                        <AnimeIndexContainer 
+                         />
+                    </div>
+                </div>
+            </div>
         )
     }
 }

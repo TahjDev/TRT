@@ -1,0 +1,121 @@
+
+ @import "base/_variables.scss";
+
+//  sign up and view
+
+.gradient {
+    background-image: linear-gradient(to top, rgba(28,26,38, 1), 
+    rgba(0, 0, 0, 0.6));
+    height: 400px;
+}
+.display-background-img {
+  height: 400px;
+}
+
+
+
+.displayed-anime{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "anime title . icon"
+    "anime body1 body1 body1"
+    "anime . . ."
+    "anime . . .";
+    width: 700px;
+    margin: auto;
+    padding-top: 100px;
+    // margin-top: $nav-bar-height;
+    h1  {
+       font-size:  25px;
+    }
+}
+
+.display-anime-name {
+    grid-area: title;
+}
+
+.display-anime-photo {
+    grid-area: anime;
+    justify-self: end;
+    margin-right: 20px;
+    img  {
+        width: 150px;
+        height: 250px;
+        
+    }
+}
+
+.display-body {
+    grid-area: body1;
+
+}
+
+
+
+
+
+
+// anime show
+
+.gradient-show {
+    background-image: linear-gradient(to top, rgba(28,26,38, 1), 
+    rgba(37, 35, 35, 0.4));
+    height: 400px;
+}
+.display-background-img-show {
+  height: 400px;
+}
+
+
+.displayed-anime-show{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "anime title title icon"
+    "anime body2 body2 body2"
+    "anime . . ."
+    "anime . button  .";
+    width: 900px;
+    margin: auto;
+    padding-top: 200px;
+    // margin-top: $nav-bar-height;
+    h1  {
+       font-size:  40px;
+    }
+}
+
+.display-anime-name-show {
+    grid-area: title;
+}
+
+#watchlist-button {
+    grid-area: button;
+    border: 2px solid $vrv-yellow;
+    text-align: center;
+    height: 60px;
+    color: $vrv-yellow;
+    &:hover{
+        color: rgb(28,26,38);
+        background: $vrv-yellow;
+        font-weight: 600;
+    }
+}
+
+.display-anime-photo-show {
+    grid-area: anime;
+    justify-self: end;
+    margin-right: 40px;
+    img  {
+        width: 220px;
+        height: 350px;
+        
+    }
+}
+
+.display-body-show {
+    grid-area: body2;
+
+}

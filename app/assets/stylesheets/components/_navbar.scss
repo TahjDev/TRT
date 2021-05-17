@@ -1,5 +1,70 @@
  @import "base/_variables.scss";
 
 .nav-bar {
-    background-color: $background-color;
+    display: flex;
+    justify-content: space-between;
+    background-color:  rgb(28,26,38);
+    position: fixed;
+    top: 0;
+    height: $nav-bar-height;
+    width: 100%;
+    border-bottom: 2px solid $vrv-yellow;
+    .right-side {
+        display: flex;
+    }
+}
+.nav-bar-profile-button {
+    width: 100px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     color: $vrv-gray;
+    img {
+        border-radius: 60%;
+        width: 50px;
+       
+
+    }
+}
+
+.nav-bar-search-button{
+    width: 80px;
+    font-size: 20px;
+    text-align: center;
+    color: $vrv-gray;
+    padding-top: 13px;
+    border-right: 1px solid $vrv-gray;
+}
+
+.nav-bar-watchlist-button {
+    width: 80px;
+    border-right: 1px solid $vrv-gray;
+    border-left: 1px solid $vrv-gray;
+    &:hover{
+    filter: brightness(120%);
+}
+
+    img {
+        width: 20px;
+        margin-top: 20px;
+        margin-left: 30px
+
+    }
+    
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover {
+        filter: $filter;
+    }
+    img {
+        width: 60px
+    }
+    h1 {
+        font-size: 40px;
+        font-weight: 1000;
+    }
 }

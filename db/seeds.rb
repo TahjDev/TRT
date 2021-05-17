@@ -25,13 +25,14 @@ demo = User.create(username: "CoolPerson", email:"coolperson@you.com", password:
 # Episode.create(name: "Shonen", description: "")
 
 crunchy = Service.create(name: "CRUNCHYROLL")
-
+# start of this anime
 aot = Anime.create(name: "Attack on Titans", description: "It is set in a world where humanity lives inside cities surrounded by three enormous walls that protect them from the gigantic man-eating humanoids referred to as Titans;the story follows Eren Yeager, who vows to exterminate the Titans after a Titan brings about the destruction of his hometown and the death of his mother.",
 service_id: 1, year: 2013)
 
 aot_img_file = open("https://trt-seeds.s3.amazonaws.com/anime_images/aot_img.jpeg")
-
+aot_bkg_file = open("https://trt-seeds.s3.amazonaws.com/anime_background_images/anime_backgrounds/aot_background.jpeg")
 aot.photo.attach(io: aot_img_file, filename: 'anime_images/aot_img.jpeg')
+aot.background_photo.attach(io: aot_bkg_file, filename: "anime_background_images/anime_backgrounds/aot_background.jpeg")
 
 aotEp = Episode.create(name: "Unexpected Recruit", description: "In this desolent land burdened by sadness only one star can take on this heavy existential dread.", anime_id: aot.id )
 

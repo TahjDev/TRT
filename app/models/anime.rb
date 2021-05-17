@@ -3,6 +3,7 @@ class Anime < ApplicationRecord
     validates :description, presence: true
 
     has_one_attached :photo
+    has_one_attached :background_photo
 
     belongs_to :service,
     primary_key: :id,

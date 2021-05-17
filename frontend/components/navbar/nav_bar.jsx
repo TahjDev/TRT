@@ -1,6 +1,6 @@
 import React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faYoutube, faSearch} from '@fortawesome/free-solid-svg-icons'
+import { faYoutubeSquare, faSearch, faSortDown} from '@fortawesome/free-solid-svg-icons'
 import { Link } from "react-router-dom"
 
 class NavBar extends React.Component {
@@ -27,23 +27,32 @@ class NavBar extends React.Component {
         return(
             <div className="nav-bar">
                 <button></button>
-                <button></button>
-                
-                <Link to="/watchlist"> 
-                    <div className="nav-bar-button">
-                        <FontAwesomeIcon icon={faYoutube} /> 
-                    </div>
-                </Link>
-                <div >
-                    <FontAwesomeIcon icon={faSearch}/>
-                </div>
-                
-                <div >
-                    <img src={window.prof_icon} alt=""/>
-                </div>
-                
-                
 
+
+                <Link>
+                <div className="logo">
+                    <img src={window.logo} alt=""/> 
+                    <h1>TRT</h1>
+                </div>
+                </Link>
+                
+               
+                <div className="right-side">
+                    <Link className="nav-bar-watchlist-button" to="/watchlist">
+                        <div>
+                            <img src={window.watchlist_icon} alt="" />
+                        </div>
+                    </Link>
+                    <div className="nav-bar-search-button" >
+                        <FontAwesomeIcon icon={faSearch}/>
+                    </div>
+
+                    <div className="nav-bar-profile-button">
+                        <img src={window.prof_icon} alt=""/>
+                        <FontAwesomeIcon icon={faSortDown} />
+                    </div>
+                </div>
+                
             </div >
         )
     }

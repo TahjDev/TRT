@@ -1,6 +1,7 @@
 import React from "react"
 import EpisodeItem from "./episode_item"
 import { postWatchlist} from "../../utils/watchlist_util"
+import AnimeIndexItem from "./anime_index_item"
 
 class AnimeShow extends React.Component {
     constructor(props) {
@@ -14,7 +15,7 @@ class AnimeShow extends React.Component {
     }
 
     mappedEpisodes(){
-    return  this.props.anime.episodes.map(ep => {
+    return  this.props.anime.episodes.slice(1).map(ep => {
             const id = Object.values(ep)[0].id
             const episode = ep[id]
             debugger
@@ -40,19 +41,40 @@ class AnimeShow extends React.Component {
 
 
     render() {
-        debugger
+        
         if (this.props.anime === undefined) return null
         if (this.props.anime.episodes === undefined) return null 
-        debugger
+        const button = (
+            <button id="watchlist-button" onClick={this.addToWatchList}>ADD TO WATCHLIST </button>
+        )
         return (
             <>
-            <div className="anime">
-                <img src={this.props.anime.photoUrl} />
-                <h1>{this.props.anime.name}</h1>
-                <p>{this.props.anime.description}</p>
-                <button onClick={this.addToWatchList}>ADD TO WATCHLIST </button>
-            </div>
+                    <div className="display-background-img-show"
+                        style={{
+                            backgroundImage:
+                                `url(${this.props.anime.backgroundPhoto})`
+                        }}>
+                        <div className="gradient-show">
+                            <div className="displayed-anime-show"    >
+                            <AnimeIndexItem 
+                            name={"display-anime-name-show"}
+                             photo={"display-anime-photo-show"} 
+                             anime={this.props.anime} 
+                             body={"display-body-show"}
+                            />
+                            {button}
+                            </div>
+                        </div>
+                       
+                    </div>
             <div>
+                        {
+                            <EpisodeItem
+                                key={id}
+                                episode={this.props.anime.episodes[0]}
+                            />
+                        }
+                    
                 {this.mappedEpisodes()}
             </div>
             </>
