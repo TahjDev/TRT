@@ -13,7 +13,7 @@ class Watchlist extends React.Component {
         return this.props.user.episodes.map(ep => {
             const id = Object.values(ep)[0].id
             const episode = ep[id]
-            debugger
+            // debugger
             return (
                 <EpisodeItem
                     key={id}

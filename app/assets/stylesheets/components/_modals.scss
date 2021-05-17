@@ -1,0 +1,82 @@
+   @import "base/_variables.scss";
+  .modal-background {
+     position: fixed;
+     top: 0;
+     bottom: 0;
+     right: 0;
+     left: 0;
+     background: rgba(0, 0, 0, 0.7);
+     z-index: 10;
+ }
+
+ .modal-child {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 600;
+ }
+
+
+
+ .side-modal-background {
+     position: fixed;
+     top: $nav-bar-height;
+     bottom: 0;
+     right: 0;
+     left: 0;
+     background: rgba(0, 0, 0, 0.7);
+     z-index: 10;
+ }
+
+ .side-modal-child {
+     position: absolute;
+     top: 11%;
+     left: 88%;
+     transform: translate(-50%, -50%);
+     width: 600;
+ }
+
+ .sidebar-background {
+     width: 380px;
+     background: #211d35 ;
+     height: 150px;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .sidebar-button {
+     height: 50px;
+     margin-top: 20px;
+   
+    &:hover{
+         border: 2px solid $vrv-yellow;
+     }
+     p {
+         text-align: center;
+         margin-top: 0;
+         margin-bottom: 0;
+        height: 25px;
+
+     }
+     .little-p{
+         font-size: 12px;
+     }
+    
+ }
+
+ .sidebar-background-logout {
+    width: 380px;
+     background: #211d35 ;
+     height: 500px;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .side-modal-child-logout {
+     position: absolute;
+     top: 11%;
+     left: 88%;
+     transform: translate(-50%, -50%);
+     width: 600;
+ }

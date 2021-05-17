@@ -17,7 +17,7 @@ class EpisodeShow extends React.Component {
         return this.props.anime.episodes.map(ep => {
             const id = Object.values(ep)[0].id
             const episode = ep[id]
-            debugger
+            // debugger
             return (
                 <EpisodeItem
                     key={id}
@@ -41,7 +41,7 @@ class EpisodeShow extends React.Component {
     render() {
         
         if (this.props.anime === undefined) return null
-        debugger
+        // debugger
         const currentEp = this.currentEpisode()
         return (
             <>

@@ -9,21 +9,33 @@ class NavBar extends React.Component {
         
     }
 
-    // display() {
-    //   return (  this.props.currentUser ? (
-    //         <div>
-    //           <Link to="/splash"> <button onClick={this.props.logout}>Log Out</button></Link> 
-    //         </div>
-    //     ) : (
-    //             <div>
-    //                 <Link to="/splash" >Sign Up</Link>
-    //             </div>
-
-    //         )
-    //   )
-    // }
+    componentDidMount(){
+        debugger
+       this.props.currentUser ? this.props.fetchUser(this.props.currentUser.id) :  null
+        
+    }
 
     display(){
+        let image = [null];
+        let modal;
+        debugger
+        if (this.props.currentUser && this.props.currentUser.photoUrl) {
+            image = [
+                <img src={this.props.currentUser.photoUrl} />]
+            modal = this.props.logout
+                debugger
+        } else if (this.props.currentUser && this.props.currentUser.photoUrl === undefined){
+            image = [<img src={window.avatar} />]
+            debugger
+        }
+        else if (this.props.currentUser === null) {
+            image = [
+                <img src={window.prof_icon} alt="" />
+            ]
+            modal = this.props.signup;
+            debugger
+        } 
+        debugger
         return(
             <div className="nav-bar">
                 <button></button>
@@ -47,8 +59,8 @@ class NavBar extends React.Component {
                         <FontAwesomeIcon icon={faSearch}/>
                     </div>
 
-                    <div className="nav-bar-profile-button">
-                        <img src={window.prof_icon} alt=""/>
+                    <div onClick={() => modal()} className="nav-bar-profile-button">
+                        {image[0]}
                         <FontAwesomeIcon icon={faSortDown} />
                     </div>
                 </div>

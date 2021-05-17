@@ -13,10 +13,12 @@ const EpisodeItem = ({ episode }) => {
                 }
             }}>
                  <img src={episode.photoUrl} alt="episode_img" />
+                <div>
+                    <h1>E1 - {episode.name}</h1>
+                    <p>{episode.description}</p>
+                </div>
             </Link> 
-            <div>
-                 <p>{episode.name}</p>
-            </div>
+            
         </>
     )
 }

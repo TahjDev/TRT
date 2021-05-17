@@ -41,9 +41,6 @@ export const updateUser = (data) => dispatch => {
 export const loginUser = formUser => dispatch => {
    return SessionAPIUtil.postSession(formUser).then(user => dispatch(receiveCurrentUser(user)), err => dispatch(receiveError(err.responseJSON)))
 }
-export const logutUser = formUser => dispatch => {
-   return SessionAPIUtil.postSession(formUser).then(user => dispatch(receiveCurrentUser(user)))
-}
 
 export const logout = () => dispatch => {
  return SessionAPIUtil.deleteSession().then( () => dispatch(logoutCurrentUser()))

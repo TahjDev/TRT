@@ -58,7 +58,7 @@ class Signup extends React.Component {
                             </label>
                             <button className="yellow-button" onClick={this.handleSubmit}>CREATE ACCOUNT</button>
                             <div>
-                            <p>Existing user? <button>{this.props.otherForm}</button></p>
+                            <p>Existing user? {this.props.otherForm}</p>
                             </div>
                         </form>
 

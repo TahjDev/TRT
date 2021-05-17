@@ -22,8 +22,10 @@
     img {
         border-radius: 60%;
         width: 50px;
-       
-
+    }
+    &:hover{
+        filter: $filter;
+        cursor: pointer
     }
 }
 

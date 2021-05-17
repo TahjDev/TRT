@@ -4,13 +4,16 @@ import NavBar from "./nav_bar"
 import { logout } from "../../actions/session_actions"
 import { removeError } from "../../actions/session_actions"
 import { openModal } from "../../actions/modal_actions"
+import { fetchUser } from "../../actions/session_actions"
 
 const mSTP = ({ session }) => {
     const { currentUser } = session
+    debugger
     let { error } = session
     
     return {
         currentUser,
+     
         errors : error
     }
 }
@@ -20,11 +23,11 @@ const mDTP = dispatch => {
    return {
        logout: () => dispatch(logout()),
        removeError: () => dispatch(removeError()),
-       otherForm: (
-        <button onClick={() => dispatch(openModal())}> 
-        
-        </button> 
-       )
+       signup: () => dispatch(openModal("sidebarSignup")),
+       logout: () => dispatch(openModal("sidebarLogout")),
+       fetchUser: (id) => dispatch(fetchUser(id))
+
+
    } 
    
 }
