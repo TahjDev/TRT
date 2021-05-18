@@ -633,11 +633,23 @@ eternityEp4 = Episode.create(name: "Resourceful Orb", description: "Hayase escor
 eternityEp5 = Episode.create(name: "Hateful Tradition", description: "Parona escapes with March, Fushi and the elder but is chased by the villagers from Yanome.", anime_id: eternity.id )
 eternityEp6 = Episode.create(name: "Really Really Sad Part", description: "After March dies, Parona gives the news about the death to March's parents. With Yanome soldiers wanting to capture Fushi, Parona convinces him to part ways and escape for sake of them both.", anime_id: eternity.id )
 
-aot_vid_file = open("https://trt-seeds.s3.amazonaws.com/videos/Patrick+joins+the+Survey+Corps.mp4")
-aotEp.video.attach(io: aot_vid_file, filename: "videos/Patrick joins the Survey Corps.mp4")
 
-aot_ep_file = open("https://trt-seeds.s3.amazonaws.com/video_thumbnails/Screen+Shot+2021-05-14+at+2.51.37+PM.png")
-aotEp.photo.attach(io: aot_ep_file, filename: "video_thumbnails/Screen Shot 2021-05-14 at 2.51.37 PM.png" )
+eternity_vid_file = open("https://trt-seeds.s3.amazonaws.com/videos/To+Your+Eternity+++OFFICIAL+TRAILER+2.mp4")
+eternityEp1.video.attach(io: eternity_vid_file, filename: "videos/To Your Eternity OFFICIAL TRAILER 2.mp4")
+eternityEp2.video.attach(io: eternity_vid_file, filename: "videos/To Your Eternity OFFICIAL TRAILER 2.mp4")
+eternityEp3.video.attach(io: eternity_vid_file, filename: "videos/To Your Eternity OFFICIAL TRAILER 2.mp4")
+eternityEp4.video.attach(io: eternity_vid_file, filename: "videos/To Your Eternity OFFICIAL TRAILER 2.mp4")
+eternityEp5.video.attach(io: eternity_vid_file, filename: "videos/To Your Eternity OFFICIAL TRAILER 2.mp4")
+eternityEp6.video.attach(io: eternity_vid_file, filename: "videos/To Your Eternity OFFICIAL TRAILER 2.mp4")
+
+
+eternity_ep_file = open("https://trt-seeds.s3.amazonaws.com/video_thumbnails/to_you_eternity_ep_img.png")
+eternityEp1.photo.attach(io: eternity_ep_file, filename: "video_thumbnails/to_you_eternity_ep_img.png" )
+eternityEp2.photo.attach(io: eternity_ep_file, filename: "video_thumbnails/to_you_eternity_ep_img.png" )
+eternityEp3.photo.attach(io: eternity_ep_file, filename: "video_thumbnails/to_you_eternity_ep_img.png" )
+eternityEp4.photo.attach(io: eternity_ep_file, filename: "video_thumbnails/to_you_eternity_ep_img.png" )
+eternityEp5.photo.attach(io: eternity_ep_file, filename: "video_thumbnails/to_you_eternity_ep_img.png" )
+eternityEp6.photo.attach(io: eternity_ep_file, filename: "video_thumbnails/to_you_eternity_ep_img.png" )
 # end of this anime
 
 # start of this anime
@@ -649,13 +661,28 @@ world_bkg_file = open("https://trt-seeds.s3.amazonaws.com/anime_background_image
 world.photo.attach(io: world_img_file, filename: 'anime_images/world_trigger.jpeg')
 world.background_photo.attach(io: world_bkg_file, filename: "anime_background_images/anime_backgrounds/world_trigger_background.jpeg")
 
-worldEp = Episode.create(name: "Unexpected Recruit", description: "In this desolent land burdened by sadness only one star can take on this heavy existential dread.", anime_id: world.id )
+worldEp1 = Episode.create(name: "Kuga knows Best", description: "In Mikado City, Yūma Kuga transfers to the Third Mikado City Middle School, where he meets Osamu Mikumo and gets in trouble with the class' bullies.", anime_id: world.id )
+worldEp2 = Episode.create(name: "I know you're Lying", description: "After Yūma's battle with the Neighbor, Miwa Unit investigates the site and is surprised to know the Neighbor wasn't defeated by one of Border's agents.", anime_id: world.id )
+worldEp3 = Episode.create(name: "Neighbor", description: "Despite Yūma's warning that he will die if he attacks such powerful Trion soldiers, Osamu rushes in to save his fellow students from the Mole Mods.", anime_id: world.id )
+worldEp4 = Episode.create(name: "Black Trigger", description: "For using his Trigger outside of Training, Osamu is told to report to Headquarters later that day.", anime_id: world.id )
+worldEp5 = Episode.create(name: "Do your best Chika", description: "Kitora strikes a fatal blow to the Ilgar attacking Mikado City, but activates its self-destruct ability.", anime_id: world.id )
+worldEp6 = Episode.create(name: "A Neighbor joins Border??", description: "After Osamu is expelled from Border, Jin meets him, and is introduced to Yūma, discovering Yūma is a Neighbor.", anime_id: world.id )
 
-aot_vid_file = open("https://trt-seeds.s3.amazonaws.com/videos/Patrick+joins+the+Survey+Corps.mp4")
-aotEp.video.attach(io: aot_vid_file, filename: "videos/Patrick joins the Survey Corps.mp4")
+world_vid_file = open("https://trt-seeds.s3.amazonaws.com/videos/No+Walls+No+Wires+++World+Trigger+2nd+Season.mp4")
+worldEp1.video.attach(io: world_vid_file, filename: "videos/No Walls No Wires World Trigger 2nd Season.mp4")
+worldEp2.video.attach(io: world_vid_file, filename: "videos/No Walls No Wires World Trigger 2nd Season.mp4")
+worldEp3.video.attach(io: world_vid_file, filename: "videos/No Walls No Wires World Trigger 2nd Season.mp4")
+worldEp4.video.attach(io: world_vid_file, filename: "videos/No Walls No Wires World Trigger 2nd Season.mp4")
+worldEp5.video.attach(io: world_vid_file, filename: "videos/No Walls No Wires World Trigger 2nd Season.mp4")
+worldEp6.video.attach(io: world_vid_file, filename: "videos/No Walls No Wires World Trigger 2nd Season.mp4")
 
-aot_ep_file = open("https://trt-seeds.s3.amazonaws.com/video_thumbnails/Screen+Shot+2021-05-14+at+2.51.37+PM.png")
-aotEp.photo.attach(io: aot_ep_file, filename: "video_thumbnails/Screen Shot 2021-05-14 at 2.51.37 PM.png" )
+world_ep_file = open("https://trt-seeds.s3.amazonaws.com/video_thumbnails/world_tri_ep_img.png")
+worldEp1.photo.attach(io: world_ep_file, filename: "video_thumbnails/world_tri_ep_img.png" )
+worldEp2.photo.attach(io: world_ep_file, filename: "video_thumbnails/world_tri_ep_img.png" )
+worldEp3.photo.attach(io: world_ep_file, filename: "video_thumbnails/world_tri_ep_img.png" )
+worldEp4.photo.attach(io: world_ep_file, filename: "video_thumbnails/world_tri_ep_img.png" )
+worldEp5.photo.attach(io: world_ep_file, filename: "video_thumbnails/world_tri_ep_img.png" )
+worldEp6.photo.attach(io: world_ep_file, filename: "video_thumbnails/world_tri_ep_img.png" )
 # end of this anime
 
 

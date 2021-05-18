@@ -8,7 +8,7 @@ import { fetchUser } from "../../actions/session_actions"
 
 const mSTP = ({ session }) => {
     const { currentUser } = session
-    debugger
+    
     let { error } = session
     
     return {

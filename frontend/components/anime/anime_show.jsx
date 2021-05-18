@@ -6,7 +6,7 @@ import AnimeIndexItem from "./anime_index_item"
 class AnimeShow extends React.Component {
     constructor(props) {
         super(props)
-        // debugger
+        // 
         this.addToWatchList = this.addToWatchList.bind(this)
         }
 
@@ -18,7 +18,7 @@ class AnimeShow extends React.Component {
     return  this.props.anime.episodes.slice(1).map(ep => {
             const id = Object.values(ep)[0].id
             const episode = ep[id]
-            // debugger
+            // 
             return (
                 <EpisodeItem
                 key={id}

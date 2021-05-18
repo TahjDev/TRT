@@ -9,16 +9,16 @@ import SidebarLogoutModalContainer from "./sidebar_logout_modal_container"
 
 
 const Modal = ({ modal, closeModal }) => {
-    debugger
+    
     if (!modal) return null;
-    debugger
+    
     let component;
     switch(modal) {
         case "login":
             component = <LoginContainer/>
             break;
         case "signup":
-            // debugger
+            // 
             component = <SignupModalContainer/>
             break;
         case "sidebarSignup":
@@ -45,7 +45,7 @@ const Modal = ({ modal, closeModal }) => {
          
 
     if (modal === "sidebarSignup") {
-        debugger
+        
        correctDisplay.push(
        <div className="side-modal-background" onClick={closeModal}>
             <div className="side-modal-child" onClick={e => e.stopPropagation()}>
@@ -56,7 +56,7 @@ const Modal = ({ modal, closeModal }) => {
     }
 
     if (modal === "sidebarLogout") {
-        debugger
+        
         correctDisplay.push(
             <div className="side-modal-background" onClick={closeModal}>
                 <div className="side-modal-child-logout" onClick={e => e.stopPropagation()}>

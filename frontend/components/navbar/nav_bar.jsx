@@ -10,7 +10,7 @@ class NavBar extends React.Component {
     }
 
     componentDidMount(){
-        debugger
+        
        this.props.currentUser ? this.props.fetchUser(this.props.currentUser.id) :  null
         
     }
@@ -18,15 +18,15 @@ class NavBar extends React.Component {
     display(){
         let image = [null];
         let modal;
-        debugger
+        
         if (this.props.currentUser && this.props.currentUser.photoUrl) {
             image = [
                 <img src={this.props.currentUser.photoUrl} />]
             modal = this.props.logout
-                debugger
+                
         } else if (this.props.currentUser && !this.props.currentUser.photoUrl){
             image = [<img src={window.avatar} />]
-            debugger
+            
             modal = this.props.logout
         }
         else if (this.props.currentUser === null) {
@@ -34,9 +34,9 @@ class NavBar extends React.Component {
                 <img src={window.prof_icon} alt="" />
             ]
             modal = this.props.signup;
-            debugger
+            
         } 
-        debugger
+       
         return(
             <div className="nav-bar">
                 <button></button>

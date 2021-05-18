@@ -21,7 +21,7 @@ class AnimeIndex extends React.Component {
     }
 
     render() {
-        debugger
+       
         if (this.props.animes.length === 0) return null 
        return (
         <div>

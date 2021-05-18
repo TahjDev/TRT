@@ -1,4 +1,4 @@
-import React from "React"
+import React from "react"
 import EpisodeItem from "../anime/episode_item"
 class Watchlist extends React.Component {
     constructor(props) {
@@ -13,7 +13,7 @@ class Watchlist extends React.Component {
         return this.props.user.episodes.map(ep => {
             const id = Object.values(ep)[0].id
             const episode = ep[id]
-            // debugger
+            
             return (
                 <EpisodeItem
                     key={id}
