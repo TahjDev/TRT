@@ -5,14 +5,15 @@ import React from "react"
 
 const mDTP = dispatch => {
      // debugger
-   return {
+     return {
+         
        SigninButton: <button className="sidebar-button"
-            onClick={() =>dispatch(openModal("login"))}> 
+     onClick = {() => dispatch(openModal("signup"))}> 
              <p>Create Account</p>
              <p className="little-p">Join for free!!</p>
        </button> ,
        SignupButton: <button className="sidebar-button"
-            onClick={() => dispatch(openModal("signup"))}>
+            onClick={() => dispatch(openModal("login"))}>
                  <p>Sign In</p>
                  <p className="little-p">If you already have an account come on in!</p>
        </button>

@@ -24,9 +24,10 @@ class NavBar extends React.Component {
                 <img src={this.props.currentUser.photoUrl} />]
             modal = this.props.logout
                 debugger
-        } else if (this.props.currentUser && this.props.currentUser.photoUrl === undefined){
+        } else if (this.props.currentUser && !this.props.currentUser.photoUrl){
             image = [<img src={window.avatar} />]
             debugger
+            modal = this.props.logout
         }
         else if (this.props.currentUser === null) {
             image = [
@@ -41,7 +42,7 @@ class NavBar extends React.Component {
                 <button></button>
 
 
-                <Link>
+                <Link to="/view">
                 <div className="logo">
                     <img src={window.logo} alt=""/> 
                     <h1>TRT</h1>

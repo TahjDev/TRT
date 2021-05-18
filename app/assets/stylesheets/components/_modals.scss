@@ -1,4 +1,6 @@
    @import "base/_variables.scss";
+   @import "base/mixins.scss";
+
   .modal-background {
      position: fixed;
      top: 0;
@@ -17,6 +19,106 @@
      width: 600;
  }
 
+.signup-form-box-modal-right{
+    background-color: rgb(48, 45, 70);
+    // opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    margin-right: 100px;
+    align-items: center;
+    grid-column-start: 2;
+    justify-self: end;
+    grid-row-end: 1;
+    height: 500px;
+    width: 600px;
+    box-shadow:  0 0 1rem 2px rgb(10, 5, 22);
+     border-top: 3px solid $vrv-yellow;
+   
+    >div {
+        width: 300px;
+        // margin-right: 20px;
+        height: 500px;
+        background-color: rgb(20, 13, 41);
+        margin-right: 100px;
+        display: flex;
+        padding-left: 10px;
+        justify-content: center;
+        flex-direction: column;
+        border-top: 2px solid $vrv-yellow;
+          >button {
+        font-size: 20px;
+        @include button;
+    }
+    }
+  
+    >form {
+        margin-right: 50px;
+        max-width: max-content;
+        h1 {
+            margin-left: 10px;
+            font-size: 20px;
+            width: max-content;
+        }
+        >div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+.signup-form-box-modal-left{
+    background-color: rgb(48, 45, 70);
+    // opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    margin-left: 100px;
+    align-items: center;
+    grid-column-start: 2;
+    justify-self: end;
+    grid-row-end: 1;
+    height: 500px;
+    width: 600px;
+    box-shadow:  0 0 1rem 2px rgb(10, 5, 22);
+     border-top: 3px solid $vrv-yellow;
+    >div {
+        width: 300px;
+        // margin-left: 20px;
+        height: 500px;
+        background-color: rgb(20, 13, 41);
+        margin-left: 40px;
+        margin-left: 100px;
+        padding-left: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        border-top: 2px solid $vrv-yellow;
+          >button {
+        font-size: 20px;
+        @include button;
+    }
+    }
+  
+    >form {
+        margin-left: 50px;
+        h1 {
+            margin-left: 100px;
+            font-size: 30px;
+        }
+        >div {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+.signup-form-box-modal label, .signup-form-box input {
+     color: white;
+    
+}
+
+.signup-form-box-modal > p > button{
+    @include button;
+}
+
 
 
  .side-modal-background {
@@ -31,7 +133,7 @@
 
  .side-modal-child {
      position: absolute;
-     top: 11%;
+     top: 13%;
      left: 88%;
      transform: translate(-50%, -50%);
      width: 600;
@@ -40,14 +142,16 @@
  .sidebar-background {
      width: 380px;
      background: #211d35 ;
-     height: 150px;
+     height: 157px;
      display: flex;
      flex-direction: column;
  }
 
  .sidebar-button {
-     height: 50px;
+     height: 60px;
      margin-top: 20px;
+     margin-right: 40px;
+     width: 360px;
    
     &:hover{
          border: 2px solid $vrv-yellow;
@@ -66,16 +170,17 @@
  }
 
  .sidebar-background-logout {
-    width: 380px;
+    width: 400px;
      background: #211d35 ;
-     height: 500px;
+     height: 262px;
      display: flex;
      flex-direction: column;
+     align-items: center;
  }
 
  .side-modal-child-logout {
      position: absolute;
-     top: 11%;
+     top: 21%;
      left: 88%;
      transform: translate(-50%, -50%);
      width: 600;

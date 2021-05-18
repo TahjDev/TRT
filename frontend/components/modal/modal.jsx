@@ -43,18 +43,9 @@ const Modal = ({ modal, closeModal }) => {
         
     }
          
-        
-    if (modal === "sidebarSignup" || "sidebarLogout") {
-       correctDisplay.push(
-       <div className="side-modal-background" onClick={closeModal}>
-            <div className="side-modal-child" onClick={e => e.stopPropagation()}>
-                {component}
-            </div>
-        </div>
-       )
-    }
 
     if (modal === "sidebarSignup") {
+        debugger
        correctDisplay.push(
        <div className="side-modal-background" onClick={closeModal}>
             <div className="side-modal-child" onClick={e => e.stopPropagation()}>
@@ -65,6 +56,7 @@ const Modal = ({ modal, closeModal }) => {
     }
 
     if (modal === "sidebarLogout") {
+        debugger
         correctDisplay.push(
             <div className="side-modal-background" onClick={closeModal}>
                 <div className="side-modal-child-logout" onClick={e => e.stopPropagation()}>
