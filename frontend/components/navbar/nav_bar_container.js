@@ -25,8 +25,8 @@ const mDTP = dispatch => {
        removeError: () => dispatch(removeError()),
        signup: () => dispatch(openModal("sidebarSignup")),
        logout: () => dispatch(openModal("sidebarLogout")),
-       fetchUser: (id) => dispatch(fetchUser(id))
-
+       fetchUser: (id) => dispatch(fetchUser(id)),
+       search: () => dispatch(openModal("search"))
 
    } 
    

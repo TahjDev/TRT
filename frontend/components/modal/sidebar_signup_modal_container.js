@@ -4,7 +4,7 @@ import SidebarSignupModal from "./sidebar_signup_modal"
 import React from "react"
 
 const mDTP = dispatch => {
-     // 
+     
      return {
          
        SigninButton: <button className="sidebar-button"

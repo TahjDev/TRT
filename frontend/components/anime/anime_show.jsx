@@ -41,7 +41,7 @@ class AnimeShow extends React.Component {
 
 
     render() {
-        
+       
         if (this.props.anime === undefined) return null
         if (this.props.anime.episodes === undefined) return null 
         const button = (
@@ -69,10 +69,10 @@ class AnimeShow extends React.Component {
                     
                 <div className="display-episode">
                  {
-                        <EpisodeItem episode={this.props.anime.episodes[0][1]}/>
+                        <EpisodeItem episode={Object.values(this.props.anime.episodes[0])[0]}/>
                 }
                     
-                {this.mappedEpisodes()}
+                {/* {this.mappedEpisodes()} */}
             </div>
             </>
         )

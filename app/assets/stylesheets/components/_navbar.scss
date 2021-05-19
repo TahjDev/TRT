@@ -37,6 +37,10 @@
     color: $vrv-gray;
     padding-top: 13px;
     border-right: 1px solid $vrv-gray;
+     &:hover{
+        filter: $filter;
+        cursor: pointer
+    }
 }
 
 .nav-bar-watchlist-button {

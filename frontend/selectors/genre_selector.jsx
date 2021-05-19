@@ -6,18 +6,23 @@ export const selectAllAnimes = ( { entities  }) => {
 
 
 export const selectAnimeByCategory = (state) => {
-   const genres = state.entities.genres;
+   const genres = Object.values(state.entities.genres);
    const animes = selectAllAnimes(state);
-   const correctAnime = [];
-
-    animes.forEach(anime => {
-        anime.genres.forEach(genre => {
-            if (!genres.includes(genre)) {
-                return
+   if (!genres) return animes
+   for (let i = 0; i < animes.length; i++) {
+       let bool = true;
+       animes[i].genres.forEach((genre) => {
+            const name = Object.values(genre)[0]
+            if (!genres.includes(name)) {
+                    bool = false
             }
-            correctAnime.push(anime)
         });
-    });
+        if (bool === false) {continue}
+         if (bool === true ){ correctAnime.push(animes[i])} 
+   }
+  
+             
+ 
 
     return correctAnime;
 }

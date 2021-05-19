@@ -5,7 +5,7 @@ import LoginContainer from "../session/login_container"
 import SignupModalContainer from "./signup_modal_container"
 import SidebarSignupModalContainer from "./sidebar_signup_modal_container"
 import SidebarLogoutModalContainer from "./sidebar_logout_modal_container"
-
+import AnimeSelectorModalContainer from "./anime_selector_modal_container"
 
 
 const Modal = ({ modal, closeModal }) => {
@@ -27,6 +27,8 @@ const Modal = ({ modal, closeModal }) => {
         case "sidebarLogout":
             component = <SidebarLogoutModalContainer/>
             break;
+        case "search":
+            component = <AnimeSelectorModalContainer/>
         default:
         return null;
     }
@@ -60,6 +62,16 @@ const Modal = ({ modal, closeModal }) => {
         correctDisplay.push(
             <div className="side-modal-background" onClick={closeModal}>
                 <div className="side-modal-child-logout" onClick={e => e.stopPropagation()}>
+                    {component}
+                </div>
+            </div>
+        )
+    }
+
+    if (modal === "search") {
+        correctDisplay.push(
+            <div className="search-modal-background" onClick={closeModal}>
+                <div className="search-modal-child" onClick={e => e.stopPropagation()}>
                     {component}
                 </div>
             </div>

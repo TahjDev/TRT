@@ -4,6 +4,7 @@ import { Link } from "react-router-dom"
 const EpisodeItem = ({ episode }) => {
     
     // turn this entire div into a link
+    debugger
     return (
         <>
             <Link to={{
