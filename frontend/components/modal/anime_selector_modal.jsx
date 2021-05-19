@@ -1,65 +1,120 @@
 import React from "react"
+import { selectAnimeByCategory, selectAllAnimes } from "../../selectors/genre_selector"
 
 class AnimeSelectorModal extends React.Component {
     constructor(props){
         super(props)
-        this.grabAnime = this.grabAnime.bind(this)
+       
+        this.state = {
+            animes: props.animes,
+            genres: [],
+            input: ""
+        }
+        
+        debugger
     }
 
     componentDidMount(){
-        this.props.animes ? this.props.fetchAnime() : null
+        debugger
+       if ( Object.keys(this.state.animes) < 18) {
+           debugger
+           this.props.fetchAnimes()
+           this.setState({
+               animes: this.props.animes
+           })
+           debugger
+       } 
+     
     }
 
-    grabAnime(){
-        this.props.fetchAnime()
+    grabAnime(e){
+        debugger
+        this.setState({
+            input: e.target.value
+        })
+        debugger
+        let array = [];
+        let animeArray = selectAnimeByCategory(this.props.animes, this.state.genres)
+        debugger
+        animeArray.forEach(anime =>
+        {
+            if (!e.target.value) return
+            let string = e.target.value[0].toUpperCase().concat(e.target.value.slice(1).toLowerCase())
+            if (anime.name.startsWith(string)) array.push(anime)
+        })
+
+        this.setState({
+            animes: array
+        })
+        debugger
     }
+    
 
     mappedAnime(){
-      return  this.props.anime.forEach((anime, idx) => {
+        debugger
+        if (Array.isArray(this.state.animes) === false) {
+            return (
+                <div> </div>
+            )
+        }
+
+      return  this.state.animes.map((anime, idx) => {
             return <img key={idx} src={anime.photoUrl} />
         }) 
     }
 
     changeGenres(genre, e){
-       if (!this.props.genres.includes(genre)) {
-           this.props.receiveGenre(genre)
-           e.classList.remove("off")
-           e.classList.add("on")
+        debugger
+       if (!this.state.genres.includes(genre)) {
+           this.state.genres.push(genre)
+           e.target.classList.remove("off")
+           e.target.classList.add("on")
+           
        }
        else {
-            this.props.removeGenre(genre)
-            e.classList.add("off")
-            e.classList.remove("on")
+           const newArray = []
+            const id = this.state.genres.findIndex((resp) => resp === genre)
+           newArray.concat(this.state.genres.slice(0, id), this.state.genres.slice(0, id))
+           this.setState({
+               genres: newArray
+           })
+            e.target.classList.add("off")
+            e.target.classList.remove("on")
        }
     }
 
     
 
     render(){
-    
-     return(   <>
-            <input OnChange={() => this.grabAnime()} type="text" placeholder="search..."/>
+        debugger
+        // if (Obthis.state.animes ) return null
+        const allAnime = this.mappedAnime()
+     return(   <div className="search-modal-color-background">
+            <input onChange={(e) => this.grabAnime(e)} type="text" value={this.state.input} placeholder="search..."/>
             <div className="categories">
-             <button onClick={()  => this.changeGenres("Fighting")} className="off">
-                    
+             <button onClick={(e)  => this.changeGenres("Fighting", e)} className="off">
+                    Fighting
                 </button   >
-             <button onClick={() => this.changeGenres("Adventure")} className="off">
-
+             <button onClick={(e) => this.changeGenres("Adventure", e)} className="off">
+                    Adventure
                 </button>
-             <button onClick={() => this.changeGenres("Mystery")} className="off">
-
+             <button onClick={(e) => this.changeGenres("Mystery", e)} className="off">
+                    Mystery
                 </button>
-             <button onClick={() => this.changeGenres("thriller")} className="off">
-
+             <button onClick={() => this.changeGenres("thriller", e)} className="off">
+                    thriller
                 </button>
-             <button onClick={() => this.changeGenres("light-hearted")} className="off">
-
+             <button onClick={(e) => this.changeGenres("light-hearted", e)} className="off">
+                    light-hearted
                 </button>
-             <button onClick={() => this.changeGenres("Magic")} className="off">
-
+             <button onClick={(e) => this.changeGenres("Magic", e)} className="off">
+                    Magic
                 </button>
             </div>
-        </>
+            <div>
+                {allAnime}
+            </div>
+        </div>
     )}
 
 }

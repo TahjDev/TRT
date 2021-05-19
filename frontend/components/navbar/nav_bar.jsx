@@ -56,7 +56,7 @@ class NavBar extends React.Component {
                             <img src={window.watchlist_icon} alt="" />
                         </div>
                     </Link>
-                    <div onCLick={() => props.search()} className="nav-bar-search-button" >
+                    <div onClick={() => this.props.search()} className="nav-bar-search-button" >
                         <FontAwesomeIcon icon={faSearch}/>
                     </div>
 

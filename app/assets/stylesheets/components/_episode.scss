@@ -1,0 +1,12 @@
+   @import "base/_variables.scss";
+.video {
+    max-width: 100%;
+    margin-top: $nav-bar-height;
+  
+    display: flex;
+    justify-content: center;
+    #video {
+        width: 500;
+        height: 600
+    }
+}

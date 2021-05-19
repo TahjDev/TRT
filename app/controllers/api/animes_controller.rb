@@ -1,6 +1,7 @@
 class Api::AnimesController < ApplicationController
     def index
-        @animes = Anime.all
+        array = []
+        @animes = Anime.includes(:episodes).all
         render "api/animes/index"
     end
 

@@ -1,22 +1,23 @@
 import { connect } from "react-redux";
 import React from "react";
-import { selectAnimeByCategory, selectAllAnimes } from "../../selectors/genre_selector"
-import { fetchAnime } from "../../actions/anime_actions"
+
+import { fetchAnimes } from "../../actions/anime_actions"
 import { closeModal } from "../../actions/modal_actions"
 import { recieveGenre, removeGenre } from "../../actions/genre_actions"
 import AnimeSelectorModal from "./anime_selector_modal"
 
 const mSTP = (state) => {
-    const genre = Object.values(state.entities.genres)
+    debugger
+    const animes = state.entities.animes
     return {
-        animes: selectAnimeByCategory(state),
-        genres
+        animes
+
     }
 }
 
 const mDTP = dispatch => {
    return  {
-       fetchAnime: () => dispatch(fetchAnime()),
+       fetchAnimes: () => dispatch(fetchAnimes()),
        closeModal: () => dispatch(closeModal()),
        recieveGenre: () => dispatch(recieveGenre),
        removeGenre: () => dispatch(removeGenre)

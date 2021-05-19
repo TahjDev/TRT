@@ -2,10 +2,15 @@ import React from "react"
 import EpisodeItem from "./episode_item"
 import { postWatchList } from "../../utils/watchlist_util"
 import { fetchEpisode } from "../../utils/anime_utils"
+import Reactpip from 'react-picture-in-picture'
+
 class EpisodeShow extends React.Component {
     constructor(props) {
         super(props)
-     
+        this.state = ({
+            active: false
+        })
+        this.togglePip = this.togglePip.bind(this)
     }
 
     componentDidMount() {
@@ -22,12 +27,14 @@ class EpisodeShow extends React.Component {
                 <EpisodeItem
                     key={id}
                     episode={episode}
+                    anime={this.props.anime}
                 />
             )
         })
     }
 
     currentEpisode(){
+        
         let current;
         this.props.anime.episodes.forEach( ep => {
             const id = Object.values(ep)[0].id
@@ -35,6 +42,51 @@ class EpisodeShow extends React.Component {
             if (this.props.match.params.id == id) current = episode
         });
         return current;
+    }
+
+    asyncFunction(){
+        setTimeout(() => this.setState({active: true}), 1000)
+    }
+
+    togglePip(){
+        debugger
+       if ( this.state.active === true) {
+
+           this.setState({
+               active: false
+           })
+           this.asyncFunction()
+       }  
+       else if (this.state.active === false) {
+           debugger
+           this.setState({
+               active: true
+           })
+       }
+        
+    }
+
+    videoElement(currentEp){
+     return  (  <>
+        <div className="video">
+             <Reactpip isActive={this.state.active} >
+                 <source  muted controls src={currentEp.videoUrl}/>
+            </Reactpip>
+        </div>
+
+
+         <div className="anime">
+             <button onClick={() => this.togglePip()}>
+                 Toggle Picture in Picture
+                </button>
+
+
+         </div>
+         <div>
+             {this.mappedEpisodes()}
+         </div>
+        </>)
+
     }
 
 
@@ -45,17 +97,8 @@ class EpisodeShow extends React.Component {
         const currentEp = this.currentEpisode()
         return (
             <>
-            <video id="vid"width="320" height="240" controls src={currentEp.videoUrl}></video>
-             
-                <div className="anime">
-                    <img src={this.props.anime.photoUrl} />
-                    <h1>{this.props.anime.name}</h1>
-                    <p>{this.props.anime.description}</p>
-                    <button> </button>
-                </div>
-                <div>
-                    {this.mappedEpisodes()}
-                </div>
+            {this.videoElement(currentEp)}
+                
             </>
         )
     }

@@ -756,7 +756,6 @@ Filter.create(filter_id: magic.id,filtered_id: eternity.id )
 # start of genre
 Filter.create(filter_id: lighthearted.id,filtered_id: myhero.id )
 Filter.create(filter_id: lighthearted.id,filtered_id: godhs.id )
-Filter.create(filter_id: lighthearted.id,filtered_id: hotd.id )
 Filter.create(filter_id: lighthearted.id,filtered_id: hunter.id )
 Filter.create(filter_id: lighthearted.id,filtered_id: magi.id )
 Filter.create(filter_id: lighthearted.id,filtered_id: food.id )

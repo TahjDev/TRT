@@ -1,24 +1,33 @@
-export const selectAllAnimes = ( { entities  }) => {
-    const animes = entities.animes;
+export const selectAllAnimes = (animes) => {
+    debugger
     return Object.values(animes)
 }
 
 
 
-export const selectAnimeByCategory = (state) => {
-   const genres = Object.values(state.entities.genres);
-   const animes = selectAllAnimes(state);
-   if (!genres) return animes
-   for (let i = 0; i < animes.length; i++) {
-       let bool = true;
-       animes[i].genres.forEach((genre) => {
-            const name = Object.values(genre)[0]
-            if (!genres.includes(name)) {
-                    bool = false
+export const selectAnimeByCategory = (animes, genres) => {
+    debugger
+   if (Object.keys(animes) < 8) return null
+
+   const animesArray = selectAllAnimes(animes);
+   let correctAnime = [];
+
+   if (genres.length === 0 ) return animesArray
+
+   for (let i = 0; i < animesArray.length; i++) {
+       let bool = false;
+       debugger
+       let j = 0
+       animesArray[i].genres.forEach((genre) => {
+           if (genres.includes(Object.values(genre)[0].name)) {
+                    j += 1
+                    debugger
             }
+            debugger
+            j === genres.length ? bool = true : null
         });
-        if (bool === false) {continue}
-         if (bool === true ){ correctAnime.push(animes[i])} 
+         if (bool === true ){ correctAnime.push(animesArray[i])} 
+
    }
   
              
