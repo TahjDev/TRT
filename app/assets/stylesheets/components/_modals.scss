@@ -21,7 +21,6 @@
 
 .signup-form-box-modal-right{
     background-color: rgb(48, 45, 70);
-    // opacity: 0.5;
     display: flex;
     justify-content: center;
     margin-right: 100px;
@@ -36,7 +35,6 @@
    
     >div {
         width: 300px;
-        // margin-right: 20px;
         height: 500px;
         background-color: rgb(20, 13, 41);
         margin-right: 100px;
@@ -198,15 +196,36 @@
 
  .search-modal-child {
     position: absolute;
-     top: 13%;
+     top: 10%;
      left: 50%;
      transform: translate(-50%, -50%);
-     width: 1000;
+     width: 600px;
+     height: 300px;
+      #search-modal-color-background {
+     display: block;
+     justify-content: center;
+     background-color: rgb(48, 45, 70);;
+       width: 800;
+     height: 200;
+ }
+    input {
+        margin: 0 auto;
+    }
+    .categories {
+        margin: 0 auto;
+        width: fit-content;
+        button {
+
+            margin-right: 20px;
+        }
+    }
+    .search-anime{
+        overflow:hidden;
+    }
+
  }
 
- .search-modal-color-background {
-     width: 700;
-     background-color: rgb(48, 45, 70);;
- }
+ 
+
 
 

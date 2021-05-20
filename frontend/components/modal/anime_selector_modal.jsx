@@ -89,7 +89,8 @@ class AnimeSelectorModal extends React.Component {
         debugger
         // if (Obthis.state.animes ) return null
         const allAnime = this.mappedAnime()
-     return(   <div className="search-modal-color-background">
+     return(   
+     <div id="search-modal-color-background">
             <input onChange={(e) => this.grabAnime(e)} type="text" value={this.state.input} placeholder="search..."/>
             <div className="categories">
              <button onClick={(e)  => this.changeGenres("Fighting", e)} className="off">
@@ -111,7 +112,7 @@ class AnimeSelectorModal extends React.Component {
                     Magic
                 </button>
             </div>
-            <div>
+            <div className="search-anime">
                 {allAnime}
             </div>
         </div>

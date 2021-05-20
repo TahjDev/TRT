@@ -1,5 +1,5 @@
 import React from "react"
-import EpisodeItem from "./episode_item"
+import EpisodeShowItem from "./episode_show_item"
 import { postWatchList } from "../../utils/watchlist_util"
 import { fetchEpisode } from "../../utils/anime_utils"
 import Reactpip from 'react-picture-in-picture'
@@ -14,6 +14,7 @@ class EpisodeShow extends React.Component {
     }
 
     componentDidMount() {
+        debugger
         fetchEpisode(this.props.epId)
         .then(ep => {this.props.fetchAnime(ep.animeId)})
     }
@@ -24,12 +25,13 @@ class EpisodeShow extends React.Component {
             const episode = ep[id]
             
             return (
-                <EpisodeItem
+                <EpisodeShowItem
                     key={id}
                     episode={episode}
                     anime={this.props.anime}
+                    user={this.props.user}
                 />
-            )
+            ) 
         })
     }
 
@@ -69,22 +71,23 @@ class EpisodeShow extends React.Component {
     videoElement(currentEp){
      return  (  <>
         <div className="video">
-             <Reactpip isActive={this.state.active} >
+             <Reactpip className="actual-video" isActive={this.state.active} >
                  <source  muted controls src={currentEp.videoUrl}/>
             </Reactpip>
+             <button id="toggle-button"  onClick={() => this.togglePip()}>
+                 Toggle Picture in Picture
+            </button>
         </div>
+        
 
 
          <div className="anime">
-             <button onClick={() => this.togglePip()}>
-                 Toggle Picture in Picture
-                </button>
-
-
+             
+             
+                 {this.mappedEpisodes()}
+            
          </div>
-         <div>
-             {this.mappedEpisodes()}
-         </div>
+         
         </>)
 
     }

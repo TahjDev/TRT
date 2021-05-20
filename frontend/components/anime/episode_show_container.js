@@ -2,12 +2,15 @@ import { connect } from "react-redux"
 import  EpisodeShow  from "./episode_show"
 import { fetchAnime, fetchEpisode } from "../../actions/anime_actions"
 
-const mSTP = ({ entities }, ownprops) => {
+const mSTP = ({ session, entities }, ownprops) => {
     const { animes } = entities;
     const animeId = ownprops.match.params.id
+    const { currentUser } = session
+    debugger
     return {
         anime: animes[animeId],
-        epId: ownprops.match.params.id
+        epId: ownprops.match.params.id,
+        user: currentUser
     }
 }
 

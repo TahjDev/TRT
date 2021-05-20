@@ -1,5 +1,6 @@
 import React from "react"
 import AnimeIndexItem from "./anime_index_item"
+import AnimeGridItem from "./anime_grid_anime"
 
 class AnimeIndex extends React.Component {
     componentDidMount(){
@@ -11,7 +12,7 @@ class AnimeIndex extends React.Component {
         
       return  this.props.animes.slice(1).map(anime => {
           return ( 
-          <AnimeIndexItem key={anime.id} anime={anime}/>
+          <AnimeGridItem key={anime.id} anime={anime}/>
           )
         })
     }
@@ -43,8 +44,9 @@ class AnimeIndex extends React.Component {
                 </div>
 
             </div>
-
-            {this.mapAnimes()}
+            <div className="anime-grid">
+                {this.mapAnimes()}
+            </div>
         </div>
        )
     }

@@ -12,7 +12,7 @@ import WatchlistContainer from "./user/watchlist_container"
 
 const App = () => {
    return ( 
-         <div>
+         <div className="rootdiv">
                <Modal />
                <Route path="/" component={NavBarContainer}/>
                <Route exact path="/" component={SignupContainer} />

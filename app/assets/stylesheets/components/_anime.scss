@@ -152,3 +152,15 @@
     
     }
 }
+
+.anime-grid {
+    width: 1000;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row: auto;
+    grid-gap: 30px;
+    .anime-grid-img{
+        width: 110;
+        height: 160;
+    }
+}

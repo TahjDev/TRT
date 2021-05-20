@@ -9,6 +9,7 @@
     height: $nav-bar-height;
     width: 100%;
     border-bottom: 2px solid $vrv-yellow;
+    z-index: 9;
     .right-side {
         display: flex;
     }
