@@ -225,6 +225,7 @@
         position: relative;
        display: flex;
         align-items: flex-end;
+      
         
     }
     .lower-div {
@@ -242,5 +243,22 @@
         overflow: hidden;
         height: 100px;
     }
+
+ }
+ a  {
+       &:hover{
+            filter: brightness(120%);
+        }
+        >img {
+              &:hover{
+            filter: brightness(140%);
+        }
+        }
+       
+        h1  {
+              &:hover{
+            filter: brightness(140%);
+        }
+        }
 
  }
