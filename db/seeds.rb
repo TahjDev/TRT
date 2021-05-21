@@ -11,6 +11,8 @@ Anime.destroy_all
 Episode.destroy_all
 Service.destroy_all
 Filter.destroy_all
+Genre.destroy_all
+
 require 'open-uri'
 
 demo = User.create(username: "CoolPerson", email:"coolperson@you.com", password: "coolguy12")
