@@ -14,7 +14,7 @@ class EpisodeShow extends React.Component {
     }
 
     componentDidMount() {
-        debugger
+        
         fetchEpisode(this.props.epId)
         .then(ep => {this.props.fetchAnime(ep.animeId)})
     }
@@ -51,7 +51,7 @@ class EpisodeShow extends React.Component {
     }
 
     togglePip(){
-        debugger
+        
        if ( this.state.active === true) {
 
            this.setState({
@@ -60,7 +60,7 @@ class EpisodeShow extends React.Component {
            this.asyncFunction()
        }  
        else if (this.state.active === false) {
-           debugger
+           
            this.setState({
                active: true
            })
@@ -74,10 +74,10 @@ class EpisodeShow extends React.Component {
              <Reactpip className="actual-video" isActive={this.state.active} >
                  <source  muted controls src={currentEp.videoUrl}/>
             </Reactpip>
-             <button id="toggle-button"  onClick={() => this.togglePip()}>
-                 Toggle Picture in Picture
-            </button>
         </div>
+         <button id="toggle-button" onClick={() => this.togglePip()}>
+             Toggle Picture in Picture
+            </button>
         
 
 

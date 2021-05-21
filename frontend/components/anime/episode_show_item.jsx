@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 import { postWatchlist } from "../../utils/watchlist_util"
 
 const EpisodeShowItem = (props) => {
-    debugger
     // turn this entire div into a link
     let button;
     if (props.user){

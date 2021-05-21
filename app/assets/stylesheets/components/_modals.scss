@@ -43,7 +43,7 @@
         justify-content: center;
         flex-direction: column;
         border-top: 2px solid $vrv-yellow;
-          >button {
+           .button {
         font-size: 20px;
         @include button;
     }
@@ -90,7 +90,7 @@
         justify-content: center;
         flex-direction: column;
         border-top: 2px solid $vrv-yellow;
-          >button {
+          .button {
         font-size: 20px;
         @include button;
     }
@@ -131,7 +131,7 @@
 
  .side-modal-child {
      position: absolute;
-     top: 13%;
+     top: $nav-bar-height;
      left: 88%;
      transform: translate(-50%, -50%);
      width: 600;
@@ -140,7 +140,7 @@
  .sidebar-background {
      width: 380px;
      background: #211d35 ;
-     height: 157px;
+     height: 154px;
      display: flex;
      flex-direction: column;
  }
@@ -178,7 +178,7 @@
 
  .side-modal-child-logout {
      position: absolute;
-     top: 20%;
+     top: $nav-bar-height + 59px;
      left: 88%;
      transform: translate(-50%, -50%);
      width: 600;
@@ -205,8 +205,9 @@
      display: block;
      justify-content: center;
      background-color: rgb(48, 45, 70);;
-       width: 800;
-     height: 200;
+       width: 800px;
+     height: 600px;
+     overflow: scroll;
  }
     input {
         margin: 0 auto;
@@ -220,11 +221,14 @@
         }
     }
     .search-anime{
-        overflow:hidden;
+        
     }
 
  }
 
+ .on {
+     border-bottom: solid 2px $vrv-yellow;
+ }
  
 
 

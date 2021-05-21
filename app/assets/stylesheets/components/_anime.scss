@@ -4,12 +4,14 @@
 //  sign up and view
 
 .gradient {
-    background-image: linear-gradient(to top, rgba(28,26,38, 1), 
-    rgba(0, 0, 0, 0.6));
-    height: 400px;
+    background-image: linear-gradient(to top, rgba(28,26,38, 0.9), 
+    rgba(0, 0, 0, 0.3)) ,
+    linear-gradient(to bottom, rgba(28,26,38, 0.9), 
+    rgba(0, 0, 0, 0.3));
+    height: 600px;
 }
 .display-background-img {
-  height: 400px;
+  height: 600px;
 }
 
 
@@ -25,8 +27,8 @@
     "anime . . .";
     width: 700px;
     margin: auto;
-    padding-top: 100px;
-    // margin-top: $nav-bar-height;
+    padding-top: 220px;
+    height: 380px;
     h1  {
        font-size:  25px;
     }
@@ -41,9 +43,9 @@
     justify-self: end;
     margin-right: 20px;
     img  {
-        width: 150px;
-        height: 250px;
-        
+        width: 240px;
+        height: 340px;
+         box-shadow: 2px 1px 5px 1px black;
     }
 }
 
@@ -64,10 +66,15 @@
     rgba(37, 35, 35, 0.4));
     height: 400px;
 }
-.display-background-img-show {
+.display-backgrouncd-img-show {
   height: 400px;
+  
 }
 
+.display-background-img-signup {
+    height: 400px;
+    margin-bottom: 200px;
+}
 
 .displayed-anime-show{
     display: grid;
@@ -111,7 +118,7 @@
     img  {
         width: 220px;
         height: 350px;
-        
+   
     }
 }
 
@@ -121,6 +128,7 @@
 }
 
 .display-episode {
+    display: flex;
     justify-content: center;
     margin-top: 300px;
     &:hover {
@@ -133,7 +141,8 @@
     }
     a {
         display: flex;
-       padding-left: 120px;
+         width: fit-content;
+         margin-right: 0;
         div {
             width: 500px;
             background-color:#211d35 ;
@@ -154,13 +163,84 @@
 }
 
 .anime-grid {
-    width: 1000;
+    width: 1000px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-row: auto;
     grid-gap: 30px;
+    margin: auto;
     .anime-grid-img{
-        width: 110;
-        height: 160;
+        width: 110px;
+        height: 160px;
+        position: absolute;
+        bottom: 12%;
+        left: 10%;
+        box-shadow: 1px 1px 5px 1px black;
+    }
+    .anime-grid-bkg-img{
+        background-size: contain;
+        width: 300px;
+        height: 270px;
+        position: relative;
+       display: flex;
+        align-items: flex-end;
+        
+    }
+    .lower-div {
+        margin-top: 15px;
+        background-color: rgb(48, 45, 70);
+        height: 101px;
+        width: 100%;
+    
+    }
+    h1 {  
+        margin: 0 auto;
+        padding-left: 50px ;
+        width: 100px;
+        font-weight: 600;
+        overflow: hidden;
+        height: 100px;
     }
 }
+
+ .anime-selector-grid {
+    width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row: auto;
+    grid-gap: 30px;
+    margin: auto;
+    .anime-grid-img{
+        width: 110px;
+        height: 160px;
+        position: absolute;
+        bottom: 12%;
+        left: 10%;
+        box-shadow: 1px 1px 5px 1px black;
+    }
+    .anime-grid-bkg-img{
+        background-size: contain;
+        width: 300px;
+        height: 270px;
+        position: relative;
+       display: flex;
+        align-items: flex-end;
+        
+    }
+    .lower-div {
+        margin-top: 15px;
+        background-color: rgb(58, 55, 85);
+        height: 101px;
+        width: 100%;
+    
+    }
+    h1 {  
+        margin: 0 auto;
+        padding-left: 50px ;
+        width: 100px;
+        font-weight: 600;
+        overflow: hidden;
+        height: 100px;
+    }
+
+ }

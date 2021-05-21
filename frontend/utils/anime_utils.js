@@ -1,5 +1,5 @@
 export const fetchAnimes =() => {
-    debugger
+    
     return (
         $.ajax({
             url: "/api/animes" ,
@@ -9,7 +9,7 @@ export const fetchAnimes =() => {
 }
 
 export const fetchAnime = (id) => {
-    debugger
+    
     return (
         $.ajax({
             url: `/api/animes/${id}` ,
@@ -19,7 +19,7 @@ export const fetchAnime = (id) => {
 }
 
 export const fetchEpisode = (id) => {
-    debugger
+    
     return (
         $.ajax({
             url: `/api/episodes/${id}`,

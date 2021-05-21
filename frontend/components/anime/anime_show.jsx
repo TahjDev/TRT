@@ -72,7 +72,7 @@ class AnimeShow extends React.Component {
                         <EpisodeItem episode={Object.values(this.props.anime.episodes[0])[0]}/>
                 }
                     
-                {/* {this.mappedEpisodes()} */}
+                
             </div>
             </>
         )

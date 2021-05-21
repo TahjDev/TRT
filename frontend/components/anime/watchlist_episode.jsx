@@ -1,10 +1,10 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-const EpisodeItem = ({ episode }) => {
-    
+const WatchlistEpisodeItem = ({ episode }) => {
+
     // turn this entire div into a link
-   
+
     return (
         <>
             <Link to={{
@@ -13,15 +13,18 @@ const EpisodeItem = ({ episode }) => {
                     animeId: episode.id
                 }
             }}>
-                 <img src={episode.photoUrl} alt="episode_img" />
+                <img className="episode-watchlist-img" src={episode.photoUrl} alt="episode_img" />
                 <div>
-                    <h1>E1 - {episode.name}</h1>
+
                     <p>{episode.description}</p>
                 </div>
-            </Link> 
-            
+                <div className="episode-dropdown">
+                    <h1>E1 - {episode.name}</h1>
+                </div>
+            </Link>
+
         </>
     )
 }
 
-export default EpisodeItem;
+export default WatchlistEpisodeItem;

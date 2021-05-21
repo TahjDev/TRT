@@ -44,7 +44,7 @@ class SignupModal extends React.Component {
                     <div>
                     <p>We all make mistakes If you meant to get to the sign in page. Right this way... 
                     </p>
-                    <button><FontAwesomeIcon icon={faChevronLeft} /> {this.props.otherForm}</button>
+                    <div className="button"><FontAwesomeIcon icon={faChevronLeft} /> {this.props.otherForm}</div>
                     </div>
                     <form >
                         <h1>CREATE MY FREE ACCOUNT</h1>

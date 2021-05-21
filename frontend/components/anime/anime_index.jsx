@@ -26,7 +26,7 @@ class AnimeIndex extends React.Component {
         if (this.props.animes.length === 0) return null 
        return (
         <div>
-            <div className="display-background-img" 
+            <div className="display-background-img-signup" 
                    style={{
                        backgroundImage:
                            `url(${this.props.animes[0].backgroundPhoto})`
@@ -39,7 +39,7 @@ class AnimeIndex extends React.Component {
                         photo={"display-anime-photo"}
                         body={"display-body"}
                          anime={this.props.animes[0]}
-                        />
+                           />     
                     </div>
                 </div>
 

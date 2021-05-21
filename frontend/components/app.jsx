@@ -8,19 +8,20 @@ import AnimeShowContainer from "./anime/anime_show_container"
 import EpisodeShowContainer from "./anime/episode_show_container"
 import Modal from "./modal/modal"
 import WatchlistContainer from "./user/watchlist_container"
+import { AuthRoute, ProtectedRoute} from '../utils/route_utils';
 
 
 const App = () => {
    return ( 
          <div className="rootdiv">
                <Modal />
-               <Route path="/" component={NavBarContainer}/>
-               <Route exact path="/" component={SignupContainer} />
-               <Route path="/view" component={AnimeIndexContainer}/>
-               <Route path="/editprofile" component={EditUserContainer}/>
-               <Route path={`/animes/:id`} component={AnimeShowContainer}/>
-               <Route path={`/episode/:id`} component={EpisodeShowContainer}/>
-               <Route path={'/watchlist'} component={WatchlistContainer}/>
+            <Route path="/" component={NavBarContainer} />
+            <Route exact path="/" component={SignupContainer} />
+            <Route path="/view" component={AnimeIndexContainer}/>
+            <Route path="/editprofile" component={EditUserContainer}/>
+            <Route path={`/animes/:id`} component={AnimeShowContainer}/>
+            <Route path={`/episode/:id`} component={EpisodeShowContainer}/>
+            <ProtectedRoute path={'/watchlist'} component={WatchlistContainer}/>
          </div>
    )
 

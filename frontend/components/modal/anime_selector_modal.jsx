@@ -1,5 +1,6 @@
 import React from "react"
 import { selectAnimeByCategory, selectAllAnimes } from "../../selectors/genre_selector"
+import AnimeGridItem from "../anime/anime_grid_anime"
 
 class AnimeSelectorModal extends React.Component {
     constructor(props){
@@ -11,47 +12,52 @@ class AnimeSelectorModal extends React.Component {
             input: ""
         }
         
-        debugger
+        
     }
 
     componentDidMount(){
-        debugger
+        
        if ( Object.keys(this.state.animes) < 18) {
-           debugger
+           
            this.props.fetchAnimes()
            this.setState({
                animes: this.props.animes
            })
-           debugger
+           
        } 
      
     }
 
     grabAnime(e){
-        debugger
-        this.setState({
-            input: e.target.value
-        })
-        debugger
+        if (e) {
+            this.setState({
+                input: e.target.value
+            })
+
+        }
+        
         let array = [];
         let animeArray = selectAnimeByCategory(this.props.animes, this.state.genres)
-        debugger
+        
         animeArray.forEach(anime =>
         {
-            if (!e.target.value) return
+            if (!e) {
+                array = [...animeArray]
+                return
+            }
             let string = e.target.value[0].toUpperCase().concat(e.target.value.slice(1).toLowerCase())
             if (anime.name.startsWith(string)) array.push(anime)
         })
-
+        
         this.setState({
             animes: array
         })
-        debugger
+        
     }
     
 
     mappedAnime(){
-        debugger
+        
         if (Array.isArray(this.state.animes) === false) {
             return (
                 <div> </div>
@@ -59,16 +65,19 @@ class AnimeSelectorModal extends React.Component {
         }
 
       return  this.state.animes.map((anime, idx) => {
-            return <img key={idx} src={anime.photoUrl} />
+            return (
+
+                <AnimeGridItem key={anime.id} anime={anime}/>
+            ) 
+          
         }) 
     }
 
     changeGenres(genre, e){
-        debugger
+        
        if (!this.state.genres.includes(genre)) {
            this.state.genres.push(genre)
-           e.target.classList.remove("off")
-           e.target.classList.add("on")
+           e.target.classList.toggle("on")
            
        }
        else {
@@ -78,15 +87,15 @@ class AnimeSelectorModal extends React.Component {
            this.setState({
                genres: newArray
            })
-            e.target.classList.add("off")
-            e.target.classList.remove("on")
+            e.target.classList.toggle("on")
        }
+        this.grabAnime()
     }
 
     
 
     render(){
-        debugger
+        
         // if (Obthis.state.animes ) return null
         const allAnime = this.mappedAnime()
      return(   
@@ -112,7 +121,7 @@ class AnimeSelectorModal extends React.Component {
                     Magic
                 </button>
             </div>
-            <div className="search-anime">
+             <div className="anime-selector-grid">
                 {allAnime}
             </div>
         </div>

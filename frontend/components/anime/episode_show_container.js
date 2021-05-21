@@ -6,7 +6,7 @@ const mSTP = ({ session, entities }, ownprops) => {
     const { animes } = entities;
     const animeId = ownprops.match.params.id
     const { currentUser } = session
-    debugger
+    
     return {
         anime: animes[animeId],
         epId: ownprops.match.params.id,

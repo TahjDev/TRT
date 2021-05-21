@@ -28,7 +28,7 @@ const Modal = ({ modal, closeModal }) => {
             component = <SidebarLogoutModalContainer/>
             break;
         case "search":
-            debugger
+            
             component = <AnimeSelectorModalContainer/>
             break
         default:

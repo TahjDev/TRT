@@ -8,13 +8,13 @@ class User < ApplicationRecord
 
     has_one_attached :photo
 
-    has_many :watched_lists,
+    has_many :watch_lists,
     primary_key: :id,
     foreign_key: :watcher_id,
     class_name: :Watchlist
 
     has_many :episodes,
-    through: :watched_lists,
+    through: :watch_lists,
     source: :episode
 
     has_many :comments,

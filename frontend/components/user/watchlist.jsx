@@ -1,5 +1,6 @@
 import React from "react"
-import EpisodeItem from "../anime/episode_item"
+import WatchlistEpisodeItem from "../anime/watchlist_episode"
+
 class Watchlist extends React.Component {
     constructor(props) {
         super(props)
@@ -15,7 +16,7 @@ class Watchlist extends React.Component {
             const episode = ep[id]
             
             return (
-                <EpisodeItem
+                <WatchlistEpisodeItem
                     key={id}
                     episode={episode}
                 />
@@ -26,10 +27,10 @@ class Watchlist extends React.Component {
     render() {
         if (!this.props.user.episodes) return null
         return (
-            <div>
-                <h2>MY WATCHLIST</h2>
-                <div>
-                    {this.mappedEpisodes()}
+            <div className="watchlist-container">
+                    <h2 >MY WATCHLIST</h2>
+                <div className="watchlist">
+                        {this.mappedEpisodes()}
                 </div>
             </div>
         )

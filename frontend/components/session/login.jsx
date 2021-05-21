@@ -71,7 +71,7 @@ class Login extends React.Component {
                     <p>
                         Create an account to customize your VRV experience.
                         </p>
-                    <button>{this.props.otherForm} <FontAwesomeIcon icon={faChevronRight} /> <i className="fas fa-chevron-right"></i></button>
+                    <div className="button">{this.props.otherForm} <FontAwesomeIcon icon={faChevronRight} /> </div>
                 </div>
             </div>
         )

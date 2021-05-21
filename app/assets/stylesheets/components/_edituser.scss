@@ -1,0 +1,76 @@
+.edit-user {
+    width: 800px;
+    height: 400px;
+    background-color: rgb(28,26,38);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .avatar-img {
+        border-radius: 50%;
+        width: 130px;
+        height: 130px;
+    }
+    label {
+        border: 2px solid rgb(0, 140, 255);
+        color: rgb(0, 140, 255);
+        padding: 5px 10px 5px 10px;
+        margin-top: 20px;
+        font-size: 20px;
+        cursor: pointer;
+        &:hover {
+            background-color: rgb(0, 140, 255);
+            color: rgb(28,26,38);
+        }
+    }
+}
+
+
+    .input-username {
+        width: 600px;
+        // margin-top: 100px;
+    }
+
+
+.edit-form{
+    height: 500px;
+}
+
+.edit-profile-wrapper {
+    max-width: 100%;
+    margin-top: 75px;
+    height: 875px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('background-images/avatar-page.png');
+}
+
+.input-file {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+
+.input-username-wrapper {
+    width: fit-content;
+    display: flex;
+}
+
+.username-button {
+    margin: 0 0 5px 10px;
+      border: 2px solid rgb(0, 140, 255);
+        color: rgb(0, 140, 255);
+        padding: 5px 10px 5px 10px;
+        margin-top: 20px;
+        font-size: 20px;
+        cursor: pointer;
+        &:hover {
+            background-color: rgb(0, 140, 255);
+            color: rgb(28,26,38);
+        }
+}

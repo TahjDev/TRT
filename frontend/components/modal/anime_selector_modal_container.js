@@ -7,7 +7,7 @@ import { recieveGenre, removeGenre } from "../../actions/genre_actions"
 import AnimeSelectorModal from "./anime_selector_modal"
 
 const mSTP = (state) => {
-    debugger
+    
     const animes = state.entities.animes
     return {
         animes

@@ -49,12 +49,20 @@ class EditUser extends React.Component  {
     render() {
             
        return ( 
-            <div>
-               <img src={this.displayAvatar()} alt="" />
-                 <form >
-                    <input onChange={this.handleInput} type="text" value={this.state.username}/>
-                    <input type="file" onChange={this.handleFile } />
-                    <button onClick={this.handleSubmit}>Update Info</button>
+            <div className="edit-profile-wrapper">
+                 <form className="edit-form" >
+                     <div className="edit-user">
+                        <img className="avatar-img" src={this.displayAvatar()} alt="" />
+                        <input className="input-file" name="file" id="file" type="file" onChange={this.handleFile} />
+                            <label htmlFor="file" for="file">CHANGE</label>
+                     </div>
+                    <div className="input-username-wrapper">
+                         <label classname="username-label" htmlFor="username">Username
+                         <input className="input-username" onChange={this.handleInput} type="text" value={this.state.username}/>
+                        </label>
+                        <button className="username-button"onClick={this.handleSubmit}>Update Info</button>
+                   </div>
+
                 </form>
             </div>
        )
