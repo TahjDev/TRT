@@ -128,7 +128,15 @@ body {
 }
 
 
+.errors {
+    display: fit-content;
+    background-color: rgba(247, 9, 9, 0.5);
 
+    z-index:20;
+    position: absolute;
+   left: 40%;
+    box-shadow: 2px 1px 5px 1px black;
+}
 
 
 
