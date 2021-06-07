@@ -6,6 +6,7 @@ import NavBarContainer from "./navbar/nav_bar_container"
 import AnimeIndexContainer from "./anime/animes_index_container"
 import AnimeShowContainer from "./anime/anime_show_container"
 import EpisodeShowContainer from "./anime/episode_show_container"
+import Footer from "./footer/footer"
 import Modal from "./modal/modal"
 import WatchlistContainer from "./user/watchlist_container"
 import { AuthRoute, ProtectedRoute} from '../utils/route_utils';
@@ -22,6 +23,8 @@ const App = () => {
             <Route path={`/animes/:id`} component={AnimeShowContainer}/>
             <Route path={`/episode/:id`} component={EpisodeShowContainer}/>
             <ProtectedRoute path={'/watchlist'} component={WatchlistContainer}/>
+         <Route path='/' component={Footer} />
+
          </div>
    )
 
