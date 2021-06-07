@@ -28,6 +28,14 @@ class AnimeSelectorModal extends React.Component {
      
     }
 
+    // componentDidUpdate(prevProps, prevState){
+    //     if (prevState.genres && prevState.genres.length > 0 && (prevState.genres === prevState.genres)) {
+    //         this.setState({
+    //             genres: []
+    //         })
+    //     }
+    // }
+
     grabAnime(e){
         if (e) {
             this.setState({
@@ -35,16 +43,40 @@ class AnimeSelectorModal extends React.Component {
             })
 
         }
-        
+     
         let array = [];
+
         let animeArray = selectAnimeByCategory(this.props.animes, this.state.genres)
+
+        if (!e && this.state.genres !== 0) {
+            console.log(this.state.genres.length)
+            console.log(this.state)
+            array = [...animeArray]
+            this.setState({
+                animes: array
+            })
+            return
+        } 
+        else if (!e && this.state.genres === 0) {
+            console.log("right one")
+            console.log(this.state.genres.length)
+            this.setState({
+                animes: []
+            })
+            return
+        }
+
+        if (!e.target.value && this.state.genres.length === 0) {
+            this.setState({
+                animes: array
+            })
+            console.log(this.state.genres.length)
+            return null
+        }
         
         animeArray.forEach(anime =>
         {
-            if (!e) {
-                array = [...animeArray]
-                return
-            }
+        
             let string = e.target.value[0].toUpperCase().concat(e.target.value.slice(1).toLowerCase())
             if (anime.name.startsWith(string)) array.push(anime)
         })
@@ -74,13 +106,23 @@ class AnimeSelectorModal extends React.Component {
     }
 
     changeGenres(genre, e){
-        
-       if (!this.state.genres.includes(genre)) {
+       
+       if (this.state.genres.length === 1 && this.state.genres.includes(genre)) {
+           let array = [];
+           this.setState({
+               genres: array
+           })
+           console.log("other")
+           
+        }
+       else if (this.state.genres.includes(genre) === false) {
+           console.log("noooo")
            this.state.genres.push(genre)
            e.target.classList.toggle("on")
            
        }
        else {
+           console.log("heree")
            const newArray = []
             const id = this.state.genres.findIndex((resp) => resp === genre)
            newArray.concat(this.state.genres.slice(0, id), this.state.genres.slice(0, id))
@@ -111,7 +153,7 @@ class AnimeSelectorModal extends React.Component {
              <button onClick={(e) => this.changeGenres("Mystery", e)} className="off">
                     Mystery
                 </button>
-             <button onClick={() => this.changeGenres("thriller", e)} className="off">
+             <button onClick={(e) => this.changeGenres("thriller", e)} className="off">
                     thriller
                 </button>
              <button onClick={(e) => this.changeGenres("light-hearted", e)} className="off">
