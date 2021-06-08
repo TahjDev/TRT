@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 const AnimeGridItem = (props) => {
     
     return (
-    <Link to={`/animes/${props.anime.id}`}>
+    <Link to={`/animes/${props.anime.id}`} onClick={()=>props.closeModal()}>
         <div className="anime-grid-bkg-img" style={{
             backgroundImage:
                 `url(${props.anime.backgroundPhoto})`

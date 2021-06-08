@@ -102,7 +102,7 @@ class AnimeSelectorModal extends React.Component {
       return  this.state.animes.map((anime, idx) => {
             return (
 
-                <AnimeGridItem key={anime.id} anime={anime}/>
+                <AnimeGridItem key={anime.id} anime={anime} closeModal={this.props.closeModal}/>
             ) 
           
         }) 
@@ -112,6 +112,7 @@ class AnimeSelectorModal extends React.Component {
        
        if (this.state.genres.length === 1 && this.state.genres.includes(genre)) {
            let array = [];
+           e.target.classList.toggle("on")
            this.setState({
                genres: array
            })
