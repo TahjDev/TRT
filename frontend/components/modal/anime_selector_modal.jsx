@@ -29,11 +29,14 @@ class AnimeSelectorModal extends React.Component {
     }
 
     // componentDidUpdate(prevProps, prevState){
-    //     if (prevState.genres && prevState.genres.length > 0 && (prevState.genres === prevState.genres)) {
+    //     if (Object.keys(this.state.animes) < 18) {
+
+    //         this.props.fetchAnimes()
     //         this.setState({
-    //             genres: []
+    //             animes: this.props.animes
     //         })
-    //     }
+
+    //     } 
     // }
 
     grabAnime(e){

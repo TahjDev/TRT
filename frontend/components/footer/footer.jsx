@@ -37,15 +37,14 @@ const footer = () => {
             <div className = "contact">
                 <h1>Contact Me</h1>
                 <div>
-                    662.436.3533
-                    <br/>
+    
                     tahjharris00@gmail.com
                 </div>
             </div>
             <div className = "profiles">
                 <h1>Profiles</h1>
                 <div>
-                    <a href=""><i class="fab fa-github"></i> Github </a>
+                    <a href=""><i className="fab fa-github"></i>Github </a>
                     <br />
                     <a href="">LinkedIn Account</a>
                 </div>

@@ -12,3 +12,11 @@ json.episodes do
         end
     end
 end
+
+   json.genres do 
+            json.array! @anime.genres do |genre|
+                json.set! genre.id do 
+                    json.extract! genre, :name
+                end
+            end
+        end
