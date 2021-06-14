@@ -1,12 +1,13 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-const WatchlistEpisodeItem = ({ episode }) => {
+const WatchlistEpisodeItem = ({ episode, watchlistId, deleteEpisode}) => {
 
     // turn this entire div into a link
 
     return (
         <>
+        <div className="watchlist-item">
             <Link to={{
                 pathname: `/episode/${episode.id}`,
                 state: {
@@ -20,8 +21,13 @@ const WatchlistEpisodeItem = ({ episode }) => {
                 </div>
                 <div className="episode-dropdown">
                     <h1>E1 - {episode.name}</h1>
+                   
                 </div>
+              
             </Link>
+            <div onClick={(e) => deleteEpisode(watchlistId)} id="trash-button" className="fas fa-trash-alt"></div>
+        </div>
+     
 
         </>
     )

@@ -16,7 +16,7 @@ export const selectAnimeByCategory = (animes, genres) => {
 
    for (let i = 0; i < animesArray.length; i++) {
        let bool = false;
-       console.log(animesArray)
+
        let j = 0
        animesArray[i].genres.forEach((genre) => {
            if (genres.includes(Object.values(genre)[0].name)) {

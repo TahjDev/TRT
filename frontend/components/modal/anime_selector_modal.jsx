@@ -52,8 +52,7 @@ class AnimeSelectorModal extends React.Component {
         let animeArray = selectAnimeByCategory(this.props.animes, this.state.genres)
 
         if (!e && this.state.genres !== 0) {
-            console.log(this.state.genres.length)
-            console.log(this.state)
+        
             array = [...animeArray]
             this.setState({
                 animes: array
@@ -61,8 +60,6 @@ class AnimeSelectorModal extends React.Component {
             return
         } 
         else if (!e && this.state.genres === 0) {
-            console.log("right one")
-            console.log(this.state.genres.length)
             this.setState({
                 animes: []
             })
@@ -73,7 +70,6 @@ class AnimeSelectorModal extends React.Component {
             this.setState({
                 animes: array
             })
-            console.log(this.state.genres.length)
             return null
         }
         
@@ -116,17 +112,14 @@ class AnimeSelectorModal extends React.Component {
            this.setState({
                genres: array
            })
-           console.log("other")
            
         }
        else if (this.state.genres.includes(genre) === false) {
-           console.log("noooo")
            this.state.genres.push(genre)
            e.target.classList.toggle("on")
            
        }
        else {
-           console.log("heree")
            const newArray = []
             const id = this.state.genres.findIndex((resp) => resp === genre)
            newArray.concat(this.state.genres.slice(0, id), this.state.genres.slice(0, id))

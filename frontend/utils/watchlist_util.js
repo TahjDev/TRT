@@ -5,3 +5,9 @@ export const postWatchlist = (watchlist) => {
         data: { watchlist }
     })
 }
+export const deleteWatchlist = (watchlist_id) => {
+    return $.ajax({
+        url: `/api/watchlists/${watchlist_id}`,
+        method: 'DELETE'
+    })
+}

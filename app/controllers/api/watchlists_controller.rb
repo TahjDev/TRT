@@ -1,9 +1,7 @@
 class Api::WatchlistsController < ApplicationController 
    
     def create
-        
         @watchlist = Watchlist.new(watchlist_params)
-
         @watchlist.save
     end
 
@@ -11,7 +9,6 @@ class Api::WatchlistsController < ApplicationController
         @watchlist = Watchlist.find(params[:id])
         @watchlist.destroy
     end
-
 
 
     private 

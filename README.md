@@ -11,7 +11,7 @@
   
   ## Features
    ### Watchlists
-   I implemented a way for users to be able to save anime to their watchlists which essentially just meant the first episode for them to start I did this by           implementing a joins tables. This was the best option because ever user is essentially seeing the same anime and episodes so I knew I would need a many to            many relationship where people can have many anime epsidoes and vice versa. 
+   I implemented a way for users to be able to save anime to their watchlists which essentially just meant the first episode for them to start I did this by implementing a joins tables. This was the best option because ever user is essentially seeing the same anime and episodes so I knew I would need a many to            many relationship where people can have many anime epsidoes and vice versa. 
    ### AWS storage
    I needed a good and reliable way to store all my image and video data. I knew that my postgres databse couldnt handle all of it so Amazon's S3 cloud storage        was the best option. It also gives me the peace of mind reliable url's for my images and videos that I know wont be taken down living blank spaces for some of      my pages.
   ### Search Feature

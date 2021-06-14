@@ -30,9 +30,9 @@ const footer = () => {
             
             <div className="other-projects" >
                <h1>Other Projects</h1>
-               <a href="http://weeasel.herokuapp.com/">Weeasel</a>
+                <a href="http://weeasel.herokuapp.com/#/">Weeasel</a>
                <br/>
-               <a href="">Blessed Rain</a>
+                <a href="https://tahjdev.github.io/Blessed-Rain/">Blessed Rain</a>
             </div>
             <div className = "contact">
                 <h1>Contact Me</h1>
@@ -44,7 +44,7 @@ const footer = () => {
             <div className = "profiles">
                 <h1>Profiles</h1>
                 <div>
-                    <a href=""><i className="fab fa-github"></i>Github </a>
+                    <a href=""><i className="fab fa-github"></i></a>
                     <br />
                     <a href="">LinkedIn Account</a>
                 </div>

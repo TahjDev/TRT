@@ -27,9 +27,6 @@
     grid-row: auto;
     align-content: center;
     grid-gap: 30px;
-    a:hover {
-        filter: brightness(140%);
-    }
 }
 
 .episode-watchlist-img {
@@ -46,6 +43,7 @@
 #root {
    max-width: 100%;
     max-height: 100%;
+  
 }
 
 .episode-dropdown{
@@ -54,5 +52,25 @@
     height: 80px;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 
+}
+
+.watchlist-item {
+    position: relative;
+    &:hover {
+        filter: brightness(120%);
+    }
+}
+
+#trash-button {
+    position: absolute;
+    top: 85%;
+    left: 90%;
+    z-index: 2;
+    cursor: pointer;
+    color: lightgray;
+    &:hover {
+        filter: brightness(170%);
+    }
 }
