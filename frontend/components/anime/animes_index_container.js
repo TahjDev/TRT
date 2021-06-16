@@ -13,6 +13,7 @@ const mSTP = ( {entities} ) => {
 const mDTP = dispatch => {
     return {
         fetchAnimes: () => dispatch(fetchAnimes())
+        
     }
 }
 
